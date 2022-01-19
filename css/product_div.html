@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+           width:75%;
+           display: grid;
+           grid-gap: 5px;
+           grid-template-columns: repeat(3,1fr);
+           margin-left: 25%;
+           margin-top: 10px;
+
+        }
+        .text_div{
+            width: 75%;
+            margin-left:25%;
+            margin-top: 120px;
+        }
+        .text_div>div{
+            display: flex;
+
+        }
+        .container>div{
+            text-align: center;
+        }
+        
+        .product_div>button{
+            width: 100%;
+            height: 50px;
+            color: rgb(252,245,233);
+            background-color:rgb(34,34,34);
+            font-size: 20px;
+        }
+        .image_name_div{
+            height: 75%;
+        }
+        .rating_review_div{
+            margin-top: -20px;
+            display: flex;
+            height: 40px;
+            padding-left: 140px;
+        }
+        
+        .image_name_div>img{
+            height: 80%;
+            width:99%;
+        }
+        .bold{
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .upper_div{
+            display: flex;
+            height: 70px;
+            width: 97.5%;
+            text-align: center;
+            background-color: rgb(242,242,242);
+            padding-left: 40px;
+            padding-right: 0px;
+            padding-top: 5px;
+        }
+        .upper_div>img{
+            height: 30px;
+            margin-top: 15px;
+            margin-left: 70px;
+            margin-right: 10px;
+        }
+        p{
+            font-size: 20px;
+        }
+        .upper_div2{
+            height: 65px;
+            text-align: center;
+            background-color: rgb(204,204,204);
+            margin-top: 0px;
+            padding-top: 8px;
+            color: rgb(51,51,51);
+        }
+        #short{
+            font-size: 20px;
+            margin-left: 20px;
+            padding-right: 80px;
+            height: 50px;
+        }
+        .short_div{
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="upper_div">
+        <img src="https://cdn-icons-png.flaticon.com/128/664/664468.png">
+        <p>FREE US Shiping Over $50</p>
+        <img src="https://cdn-icons.flaticon.com/png/128/4374/premium/4374502.png?token=exp=1642577803~hmac=9685d7b16cfeccf708a144f16a9d3d3d">
+        <p>New costomer save 15% with code WELCOME15</p>
+        <img src="https://cdn-icons-png.flaticon.com/128/4221/4221657.png">
+        <p>Redeem Dermstore Reward</p>
+        <img src="https://cdn-icons-png.flaticon.com/128/2089/2089713.png">
+        <p>Pay in 4 With klarna</p>
+    </div>
+    <div class="upper_div2">
+        <p class="bold">Limited Edition SlinCeuticals bundles are here! SHOP NOW.</p>
+    </div>
+
+
+    <div  class="text_div">
+        <h1>Men's Essentials</h1>
+        <p>150 results</p>
+        <p>Dermstore offers a wide range of men's products to suit almost every need and concern from shaving creams to styling products, each formula is specially geared to protect, nourish or groom no matter the or skin type. Stock up on your faves or discover something new, below.</p>
+        <div class="short_div">
+            <p>Short By</p>
+            <select id="short">
+                <option>Default</option>
+                <option>Bestseller</option>
+                <option>Price:high to low</option>
+                <option>Price:low to high</option>
+                <option>A-Z</option>
+                <option>Newest arrival</option>
+                <option>Percentage discount</option>
+            </select>
+
+        </div>
+    </div>
+
+
+    <div class="container">
+    </div>
+
+
+</body>
+</html>
+<script>
+      var mensdata=
+    [
+        {
+            image:"https://static.thcdn.com/images/large/webp//productimg/1600/1600/12902086-8334900276405272.jpg",
+            product_name:"Grown Alchemist Body Cleanser - Chamomile Bergamot Rosewood (16.9 fl. oz.)",
+            rating:"★★★★★",
+            review:33,
+            price:"44.00"
+        },
+        {
+            image:"https://static.thcdn.com/images/large/webp//productimg/1600/1600/12902393-4844866433148193.jpg",
+            product_name:"COOLA Mineral Body Sunscreen Lotion SPF 50 - Fragrance-Free (5 oz.)",
+            rating:"★★★★",
+            review:15,
+            price:"32.00"
+        },
+        {
+            image:"https://static.thcdn.com/images/large/webp//productimg/1600/1600/12901984-1484867641166875.jpg",
+            product_name:"Baby Foot Baby Foot for Men (1 pair)",
+            rating:"★★★★★",
+            review:22,
+            price:"25.00"
+        },
+        {
+            image:"https://static.thcdn.com/images/large/webp//productimg/1600/1600/13347876-2084898463080388.jpg",
+            product_name:"The Nue Co. Forest Lungs (50 ml.)",
+            rating:"★★★★★",
+            review:1,
+            price:"95.00"
+        },
+        {
+            image:"https://static.thcdn.com/images/large/webp/productimg/1600/1600/11151046-1604459954827207.jpg",
+            product_name:"ELEMIS Pro-Collagen Marine Cream for Men (1 fl. oz.)",
+            rating:"★★★★★",
+            review:5,
+            price:"80.00"
+        },
+        {
+            image:"https://static.thcdn.com/images/large/webp//productimg/1600/1600/13126460-1984871741993028.jpg",
+            product_name:"Neocutis Bio Gel Firm (1.7 fl. oz.)",
+            rating:"★★★★★",
+            review:2,
+            price:"197.00"
+        },
+        {
+            image:"https://static.thcdn.com/images/large/webp//productimg/1600/1600/12902089-1394900276634007.jpg",
+            product_name:"Grown Alchemist Hand Wash - Sweet Orange Cedarwood Sage (16.9 fl. oz.)",
+            rating:"★★★★",
+            review:19,
+            price:"37.00"
+        },
+        {
+            image:"https://static.thcdn.com/images/large/webp//productimg/1600/1600/13129131-2104866309791076.jpg",
+            product_name:"Allies of Skin Multi Acids Retinoid Brightening Sleeping Facial 50 ml.",
+            rating:"★★★★",
+            review:2,
+            price:"92.00"
+        },
+        {
+            image:"https://static.thcdn.com/images/large/webp//productimg/1600/1600/12901324-1244871071940835.jpg",
+            product_name:"Anthony Ingrown Hair Treatment (3 fl. oz.)",
+            rating:"★★★★",
+            review:10,
+            price:"34.00"
+        },
+        {
+            image:"https://static.thcdn.com/images/small/webp//productimg/original/12902324-1674866430495044.jpg",
+            product_name:"R+Co TELEVISION Perfect Hair Conditioner (33.8 fl. oz.)",
+            rating:"★★★★★",
+            review:26,
+            price:"96.00"
+        },
+        {
+            image:"https://static.thcdn.com/images/large/webp//productimg/1600/1600/12902140-1414882147735410.jpg",
+            product_name:"Sunday Riley Auto Correct Brightening and Depuffing Eye Contour Cream (0.5 fl. oz.)",
+            rating:"★★★★",
+            review:121,
+            price:"65.00"
+        },
+        {
+            image:"https://static.thcdn.com/images/large/webp//productimg/1600/1600/12902680-1394866429425778.jpg",
+            product_name:"évolis Professional Prevent Activator (1.7 fl. oz.)",
+            rating:"★★★★★",
+            review:2,
+            price:"65.00"
+        },
+        {
+            image:"https://static.thcdn.com/images/large/webp//productimg/1600/1600/12901040-1804882138799538.jpg",
+            product_name:"Sunday Riley TIDAL Brightening Enzyme Water Cream (0.5 fl. oz.)",
+            rating:"★★★★",
+            review:22,
+            price:"58.00"
+        },
+        {
+            image:"https://static.thcdn.com/images/large/webp//productimg/1600/1600/12915553-5144866562968675.jpg",
+            product_name:"R+Co PARK AVE Blow Out Balm (5 fl. oz.)",
+            rating:"★★★★",
+            review:23,
+            price:"27.00"
+        },
+        {
+            image:"https://static.thcdn.com/images/large/webp//productimg/1600/1600/13046271-4694871557973457.jpg",
+            product_name:"Replenix Glycolic Acid Resurfacing Cleanser 6.7 fl. oz.",
+            rating:"★★★★★",
+            review:1,
+            price:"28.00"
+        },
+        {
+            image:"https://static.thcdn.com/images/large/webp//productimg/1600/1600/12901170-7284871281715895.jpg",
+            product_name:"Sunday Riley GOOD GENES Glycolic Acid Treatment (1 fl. oz.)",
+            rating:"★★★★★",
+            review:25,
+            price:"85.00"
+        },
+        {
+            image:"https://static.thcdn.com/images/small/webp//productimg/original/12902323-1464866430426575.jpg",
+            product_name:"R+Co TELEVISION Perfect Hair Shampoo (33.8 fl. oz.)",
+            rating:"★★★★★",
+            review:24,
+            price:"96.00"
+        },
+        {
+            image:"https://static.thcdn.com/images/large/webp//productimg/1600/1600/12901934-9634871817274590.jpg",
+            product_name:"AGENT NATEUR Holi(man) No 5 Deodorant - Unisex (1.7 fl. oz.)",
+            rating:"★★★★",
+            review:16,
+            price:"21.00"
+        }
+        
+    ];
+
+    mensdata.map(function(elm){
+        var div=document.createElement("div");
+        div.setAttribute("class","product_div");
+
+        var image=document.createElement("img");
+        image.setAttribute("src",elm.image);
+
+        var name=document.createElement("p")
+        name.textContent=elm.product_name;
+
+        var rating=document.createElement("p")
+        rating.textContent=elm.rating;
+        rating.setAttribute("class","bold")
+
+        var rvw=document.createElement("p")
+        rvw.textContent=elm.review;
+        rvw.setAttribute("class","bold")
+
+        // creating div for storing rating and review------------------------------------------
+
+        var div3=document.createElement("div")
+        div3.append(rating,rvw)
+        div3.setAttribute("class","rating_review_div")
+
+        var price=document.createElement("p")
+        price.textContent="$"+elm.price;
+        price.setAttribute("id","price");
+        price.setAttribute("class","bold")
+
+        var btn=document.createElement("button");
+        btn.textContent="QUICK BUY";
+
+        //creating div to store product image and product name--------------------------------
+        
+        var div2=document.createElement("div")
+        div2.append(image,name);
+        div2.setAttribute("class","image_name_div")
+
+        div.append(div2,div3,price,btn);
+
+        document.querySelector(".container").append(div);
+    })
+</script>
+
