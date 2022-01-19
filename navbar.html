@@ -7,15 +7,91 @@
 
     <title>Document</title>
     <style>
+        #pdct_body {
+            display: flex;
+            margin-top: 20px;
+        }
+
+        #col1 {
+            width: 25%;
+            /* height: */
+            border: 1px solid red;
+        }
+
+        #col2 {
+            width: 75%;
+            padding-left: 20px;
+            border: 1px solid red;
+
+        }
+
+        #col2>text_div {
+            margin: 2%;
+        }
+
+        #pg_title {
+            font-size: 32px;
+        }
+
+        #pdct_count {
+            margin-bottom: 20px;
+        }
+
+        #page_detail {
+            margin-bottom: 20px;
+        }
+
+        #filter_option {
+            display: flex;
+            gap: 20px;
+            margin: 5px;
+            height: 30px;
+        }
+
+        .container {
+            display: grid;
+            grid-gap: 5px;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(6, 450px);
+            gap: 10px;
+            border: 2px solid teal;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
 
 
+        }
+
+        .container>div {
+            text-align: center;
+            border: 2px solid teal;
 
 
+        }
 
-
-
-
-       
+        /* .product_div>button{
+            width: 100%;
+            height: 50px;
+            color: rgb(252,245,233);
+            background-color:rgb(34,34,34);
+            font-size: 20px;
+        }
+        .image_name_div{
+            height: 75%;
+        }
+        .rating_review_div{
+            margin-top: -20px;
+            display: flex;
+            height: 40px;
+            padding-left: 140px;
+        }
+        
+        .image_name_div>img{
+            height: 80%;
+            width:99%;
+        }
+        .bold{
+            font-size: 20px;
+            font-weight: bold;
+        } */
     </style>
 
 
@@ -91,7 +167,6 @@
             </div>
         </div>
     </nav>
-
     <div class="upper_div">
         <img src="https://cdn-icons-png.flaticon.com/128/664/664468.png">
         <p onclick="location.href='Shipping_Costs_and_Methods.html';">FREE US Shiping Over $50</p>
@@ -102,20 +177,70 @@
         <img src="https://cdn-icons-png.flaticon.com/128/2089/2089713.png">
         <p onclick="location.href='Shipping_Costs_and_Methods.html';">Pay in 4 With klarna</p>
     </div>
-
-
-
     <div class="upper_div2" onclick="location.href='Skin Care_Kits_Value_Sets.html';">
         Limited Edition SkinCeuticals bundles are here! SHOP NOW.
     </div>
+    <p style="margin-top: 10px;margin-left: 10px;">Home/Skin Care</p>
+    <div id="pdct_body">
+        <div id="col1">
+
+        </div>
+
+        <div id="col2">
+
+            <div class="text_div">
+                <div id="pg_title">Men's Essentials</div>
+                <div id="pdct_count">150 results</div>
+
+                <div id="page_detail">Dermstore offers a wide range of men's products to suit almost every need and
+                    concern from shaving
+                    creams
+                    to styling products, each formula is specially geared to protect, nourish or groom no matter the or
+                    skin
+                    type. Stock up on your faves or discover something new, below.
+                </div>
+                <div id="filter_option">
+                    <div>
+                        <p>Sort By</p>
+                    </div>
+                    <div class="short_div">
+                        <select id="short">
+                            <option>Default</option>
+                            <option>Bestseller</option>
+                            <option>Price:high to low</option>
+                            <option>Price:low to high</option>
+                            <option>A-Z</option>
+                            <option>Newest arrival</option>
+                            <option>Percentage discount</option>
+                        </select>
+
+                    </div>
+                </div>
+            </div>
 
 
+            <div class="container">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
 
-
-    <div class="container">
-    </div>
-
-
+        </div>
 
     </div>
 
@@ -137,7 +262,7 @@
 </script>
 
 
-
+<!-- 
 <script>
 
 
@@ -322,4 +447,4 @@
         console.log(cart)
     };
 
-</script>
+</script> -->
