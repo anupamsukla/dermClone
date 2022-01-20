@@ -309,11 +309,14 @@
             font-size: 130%;
             padding-left: 15px;
         }
-        #emailAlert1,#emailAlert2,#nameAlert,#passwordAlert1,#passwordAlert2,#cofirmEmailAlert{
+        #emailAlert1,#emailAlert2,#nameAlert,#passwordAlert1,#passwordAlert2,#passwordAlert3,#cofirmEmail2{
             color: #c42c21;
             margin:0px;
             padding: 0px;
             padding-left: 5px;
+        }
+        #emailAlert2,#passwordAlert1{
+            display: none;
         }
         #alertPassword{
             margin-top: 0px;
@@ -346,17 +349,17 @@
         
             <div><h2>Or creat an email account</h2></div>
             <!-- input name -->
-            <div><p class="inputtxt">*Full Name</p><input class="input" id="name" type="text"><div class="alertDiv" id="alertDiv1"><i id="alertSign" class="material-icons">report_problem</i><p  class="inputtxt" id="nameAlert">Full Name is a required field</p></div></div>
+            <div><p class="inputtxt">*Full Name</p><input class="input" id="name" type="text" oninput="nameAlert()"><div class="alertDiv" id="alertDiv1"><i id="alertSign" class="material-icons">report_problem</i><p  class="inputtxt" id="nameAlert">Full Name is a required field</p></div></div>
             <!-- input email -->
-            <div><p class="inputtxt">*Email address</p><input class="input" id="email" type="email"><div class="alertDiv" id="alertDiv2"><i id="alertSign" class="material-icons">report_problem</i><p  class="inputtxt" id="emailAlert1">Email address is a required field</p><p  class="inputtxt" id="emailAlert2">Email address is a required field</p></div></div>
+            <div><p class="inputtxt">*Email address</p><input class="input" id="email" type="email" oninput="validateEmail()"><div class="alertDiv" id="alertDiv2"><i id="alertSign" class="material-icons">report_problem</i><p  class="inputtxt" id="emailAlert1">Email address is a required field</p><p  class="inputtxt" id="emailAlert2">Email address must be a valid email</p></div></div>
             <!-- input cofirm email -->
-            <div><p class="inputtxt">*Confirm Email address</p><input class="input" id="cofirmEmail" type="email" oninput="cofirmEmailAlert()"><div class="alertDiv" id="alertDiv3"><i id="alertSign" class="material-icons">report_problem</i><p  class="inputtxt" id="cofirmEmailAlert">Email address must match</p></div></div>
+            <div><p class="inputtxt">*Confirm Email address</p><input class="input" id="cofirmEmail1" type="email" oninput="cofirmEmailAlert()"><div class="alertDiv" id="alertDiv3"><i id="alertSign" class="material-icons">report_problem</i><p  class="inputtxt" id="cofirmEmail2">Email address must match</p></div></div>
             <!-- input password -->
-            <div><p class="inputtxt">*Password</p><div class="passwordShow"><input class="password" id="passwordinput" type="password"> <button class="showPassword" type="button">SHOW</button></div ></div>
-            <div><p class="inputtxt" id="alertPassword">Include a minimum of 6 characters, and contain at least 1 number</p><div class="alertDiv" id="alertDiv4"><i id="alertSign" class="material-icons">report_problem</i><p  class="inputtxt" id="passwordAlert1">Password must be at least 6 characters</p></div></div>
+            <div><p class="inputtxt">*Password</p><div class="passwordShow"><input class="password" id="passwordinput" type="password" oninput="passwordAlert()"> <button class="showPassword" type="button">SHOW</button></div ></div>
+            <div><p class="inputtxt" id="alertPassword">Include a minimum of 6 characters, and contain at least 1 number</p><div class="alertDiv" id="alertDiv4"><i id="alertSign" class="material-icons">report_problem</i><p  class="inputtxt" id="passwordAlert1">Password must be at least 6 characters</p><p class="inputtxt" id="passwordAlert2">Password is a required field</p></div></div>
             <!-- input cofirm password -->
-            <div><p class="inputtxt">*Confirm Password</p><div class="passwordShow"  type="password" ><input class="password" type="password"> <button class="showPassword" type="button">SHOW</button></div ></div>
-            <div><div class="alertDiv" id="alertDiv5"><i id="alertSign" class="material-icons">report_problem</i><p  class="inputtxt" id="passwordAlert2">Password must match</p></div></div>
+            <div><p class="inputtxt">*Confirm Password</p><div class="passwordShow"  type="password" ><input id="confirmPassword"class="password" type="password" oninput="confirmPasswordAlert()"> <button class="showPassword" type="button">SHOW</button></div ></div>
+            <div><div class="alertDiv" id="alertDiv5"><i id="alertSign" class="material-icons">report_problem</i><p  class="inputtxt" id="passwordAlert3">Password must match</p></div></div>
             <div><p class="inputtxt">Cell Phone Number <span id="optional">(Optional)</span></p><input class="input txtMargin0" id="phone" type="text"><p class="inputtxt inputBelowTxt">We will use this number to send occasional promotional messages.</p></div>
             <div id="Referral"><p class="inputtxt">Referral Code<span id="optional">(Optional)</span></p><input class="input txtMargin0 ReferralInput" id="reffer" type="text"><p class="inputtxt inputBelowTxt">* Your referrals discount is automatically applied at cart</p></div>
             <div><p class="inputtxt">Loyalty Reward program</p></div>
@@ -396,11 +399,71 @@
         localStorage.setItem("userDataBase",JSON.stringify(userData))
     }
 
+    // ! alert confirm email
+
     function cofirmEmailAlert(){
-        
-        if(document.querySelector("#email").value != document.querySelector("#cofirmEmail").value){
-            document.querySelector("#alertDiv1").innerHTML=""  
+        if(document.getElementById("cofirmEmail1").value == document.getElementById("email").value && document.getElementById("email").value !=""){
+            document.getElementById("alertDiv3").style.display="none";
         }
-        
+        else if(document.getElementById("email").value==""){
+            document.getElementById("alertDiv2").style.display="flex"; 
+        }
+        else{
+            document.getElementById("alertDiv3").style.display="flex";  
+        }
     }
+
+    // ! alert cofirm password
+
+    function confirmPasswordAlert(){
+        if(document.getElementById("confirmPassword").value == document.getElementById("passwordinput").value && document.getElementById("passwordinput").value !=""){
+            document.getElementById("alertDiv5").style.display="none";
+        }
+        else if(document.getElementById("passwordinput").value==""){
+            document.getElementById("alertDiv4").style.display="flex"; 
+        }
+        else{
+            document.getElementById("alertDiv5").style.display="flex";  
+        }
+    }
+
+    //! alert password
+
+    function passwordAlert(){
+        if(document.getElementById("passwordinput").value.length<6){
+            document.getElementById("alertDiv4").style.display="flex";
+            document.getElementById("passwordAlert1").style.display="flex"; 
+            document.getElementById("passwordAlert2").style.display="none"; 
+        }
+        else{
+            document.getElementById("alertDiv4").style.display="none";  
+        }
+    }
+
+    //! validate email
+
+    function validateEmail(){
+
+                if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(document.getElementById("email").value))
+                {
+                    document.getElementById("alertDiv2").style.display="none";  
+                }
+                else{
+                    document.getElementById("alertDiv2").style.display="flex"; 
+                    document.getElementById("emailAlert1").style.display="none"; 
+                    document.getElementById("emailAlert2").style.display="flex"; 
+                }    
+            }
+    //! Validate email
+
+    function nameAlert(){
+        if(document.getElementById("name").value==""){
+            document.getElementById("alertDiv1").style.display="flex";
+        }
+        else{
+            document.getElementById("alertDiv1").style.display="none";  
+        }
+
+    }
+
 </script>
