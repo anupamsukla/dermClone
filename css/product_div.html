@@ -6,19 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        body{
+            font-family: "lato regular",Helvetica,Arial,sans-serif;
+            display:grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: auto;
+            grid-template-areas:
+            "a a a a"
+            "b b b b"
+            "c d d d"
+            "c e e e";
+        }
+        body>div:nth-child(1){
+            grid-area: a;
+        }
+        body>div:nth-child(2){
+            grid-area: b;
+        }
+        body>div:nth-child(3){
+            grid-area: c;
+        }
+        body>div:nth-child(4){
+            grid-area: d;
+        }
+        body>div:nth-child(5){
+            grid-area: e;
+        }
         .container{
-           width:75%;
            display: grid;
-           grid-gap: 5px;
+           grid-gap: 20px;
            grid-template-columns: repeat(3,1fr);
-           margin-left: 25%;
            margin-top: 10px;
-
         }
         .text_div{
-            width: 75%;
-            margin-left:25%;
-            margin-top: 120px;
+            margin-top: 80px;
+            line-height: 30px;
         }
         .text_div>div{
             display: flex;
@@ -33,7 +55,7 @@
             height: 50px;
             color: rgb(252,245,233);
             background-color:rgb(34,34,34);
-            font-size: 20px;
+            font-size: 17px;
         }
         .image_name_div{
             height: 75%;
@@ -51,7 +73,7 @@
         }
         .bold{
             font-size: 20px;
-            font-weight: bold;
+            font-weight: 700;
         }
         .upper_div{
             display: flex;
@@ -70,7 +92,8 @@
             margin-right: 10px;
         }
         p{
-            font-size: 20px;
+            font-size: 17px;
+            font-weight: 500;
         }
         .upper_div2{
             height: 65px;
@@ -81,7 +104,8 @@
             color: rgb(51,51,51);
         }
         #short{
-            font-size: 20px;
+            font-size: 17px;
+            font-weight: 500;
             margin-left: 20px;
             padding-right: 80px;
             height: 50px;
@@ -89,13 +113,64 @@
         .short_div{
             margin-top: 50px;
         }
+        .left_div{
+            height: 2100px;
+            width: 360px;
+            margin-top: 25px;
+            margin-left: 30px;
+        }
+        .left_div>#refine{
+            line-height: 40px;
+            margin-top: 40px;
+            font-size: 20px;
+            font-weight:700;
+
+        }
+        .left_div>button{
+            text-align: left;
+            width: 100%;
+            padding-bottom: 12px;
+            background-color: white;
+            font-size: 20px;
+            font-weight: bold;
+            padding-left: 0px;
+            border-left: 0px;
+            border-right: 0px;
+            border-top: 0px;
+            border-bottom: 1px solid gray;
+
+
+        }
+        .left_inside_div>div>p{
+            margin-left: 10px;
+            text-decoration: underline;
+
+        }
+        .left_inside_div{
+            width: 100%;
+            height: 185px;
+            margin-bottom: 40px;
+            overflow-y: scroll;
+        }
+        .left_inside_div>div{
+            display: flex;
+            height: 40px;
+        }
+        .left_inside_div>div>input{
+            margin-top: 20px;
+        }
+        #heading{
+            font-family: "Poly Regular","Times New Roman",serif;
+            font-size: 30px;
+            font-weight:400 ;
+        }
     </style>
 </head>
 <body>
     <div class="upper_div">
         <img src="https://cdn-icons-png.flaticon.com/128/664/664468.png">
         <p>FREE US Shiping Over $50</p>
-        <img src="https://cdn-icons.flaticon.com/png/128/4374/premium/4374502.png?token=exp=1642577803~hmac=9685d7b16cfeccf708a144f16a9d3d3d">
+        <img src="https://cdn-icons-png.flaticon.com/128/35/35404.png">
         <p>New costomer save 15% with code WELCOME15</p>
         <img src="https://cdn-icons-png.flaticon.com/128/4221/4221657.png">
         <p>Redeem Dermstore Reward</p>
@@ -106,9 +181,171 @@
         <p class="bold">Limited Edition SlinCeuticals bundles are here! SHOP NOW.</p>
     </div>
 
+    <!-- making left div to store shorting thing ------------------------- -->
+
+    <div class=" left_div">
+        <p>Home/ Men's Essentials</p>
+        <p id="refine">Refine</p>
+        <hr style="color: gray; padding-bottom: 50px; border-bottom: 0px;border-left: 0px; border-right: 0px;">
+
+
+        <button onclick="mydivfun">Brand </button>
+        <div class="left_inside_div">
+            <div> <input type="checkbox" class="ckeckbox1">
+                <P>111SKIN (1)</P></div>
+            <div><input type="checkbox";>
+                <P>Shiseido (2) </P></div>
+            <div><input type="checkbox";>
+                <P>Anthony (6)</P></div>
+            <div> <input type="checkbox";>
+                <P>Briogeo (1)</P></div>
+            <div> <input type="checkbox";>
+                <P>Patricks (13)</P></div>
+            <div>  <input type="checkbox";>
+                <P>Caudalie (1)</P> </div>
+            <div> <input type="checkbox";>
+                <P>ClarityRx (1)</P> </div>           
+        </div>
+
+
+        <button onclick="mydivfun">Skincare Product Type</button>
+        <div class="left_inside_div">
+            <div> <input type="checkbox" class="ckeckbox1">
+                <P>Cleansers (14)</P></div>
+            <div><input type="checkbox";>
+                <P>Moisturizers (14) </P></div>
+            <div><input type="checkbox";>
+                <P>Moisturizers (14)</P></div>
+            <div> <input type="checkbox";>
+                <P>Exfoliators & Scrubs (8)</P></div>
+            <div> <input type="checkbox";>
+                <P>Serums (8)</P></div>
+            <div>  <input type="checkbox";>
+                <P>Eye Care (7)</P> </div>
+            <div> <input type="checkbox";>
+                <P>Masks (2)</P> </div>           
+        </div>
+
+
+        <button onclick="mydivfun">Skin Type</button>
+        <div class="left_inside_div">
+            <div> <input type="checkbox" class="ckeckbox1">
+                <P>Combination (67)</P></div>
+            <div><input type="checkbox";>
+                <P>Dry (67)</P></div>
+            <div><input type="checkbox";>
+                <P>Mature (67)</P></div>
+            <div> <input type="checkbox";>
+                <P>Normal (72)</P></div>
+            <div> <input type="checkbox";>
+                <P>Oily (66)</P></div>
+            <div>  <input type="checkbox";>
+                <P>Sensitive (65)</P> </div>
+            <div> <input type="checkbox";>
+                <P>Mature (67)</P> </div>           
+        </div>
+
+
+        <button onclick="mydivfun">Skincare Concern</button>
+        <div class="left_inside_div">
+            <div> <input type="checkbox" class="ckeckbox1">
+                <P>Acne (68)</P></div>
+            <div><input type="checkbox";>
+                <P>Pigmentation (10)</P></div>
+            <div><input type="checkbox";>
+                <P>Fine Lines & Wrinkles (5)</P></div>
+            <div> <input type="checkbox";>
+                <P>Dehydration (2)</P></div>
+            <div> <input type="checkbox";>
+                <P>Dullness (2)</P></div>
+            <div>  <input type="checkbox";>
+                <P>Blemishes (1)</P> </div>
+            <div> <input type="checkbox";>
+                <P>Dark Circles & Puffiness (1)</P> </div>           
+        </div>
+
+
+        <button onclick="mydivfun">Hair Type</button>
+        <div class="left_inside_div">
+            <div> <input type="checkbox" class="ckeckbox1">
+                <P>Afro-Caribbean (1)</P></div>
+            <div><input type="checkbox";>
+                <P>Braided (1) </P></div>
+            <div><input type="checkbox";>
+                <P>Colored (21)</P></div>
+            <div> <input type="checkbox";>
+                <P>Curly & Wavy (24)</P></div>
+            <div> <input type="checkbox";>
+                <P>Dry (24)</P></div>
+            <div>  <input type="checkbox";>
+                <P>Fine (27)</P> </div>
+            <div> <input type="checkbox";>
+                <P>Normal (30)</P> </div>           
+        </div>
+
+
+        <button onclick="mydivfun">Bath & Body Category </button>
+        <div class="left_inside_div">
+            <div> <input type="checkbox" class="ckeckbox1">
+                <P>Bath & Shower (22)</P></div>
+            <div><input type="checkbox";>
+                <P>Hair Removal (15) </P></div>
+            <div><input type="checkbox";>
+                <P>Skin Health (14)</P></div>
+            <div> <input type="checkbox";>
+                <P>Hygiene & Health (10)</P></div>
+            <div> <input type="checkbox";>
+                <P>Sun Care (5)</P></div>
+            <div>  <input type="checkbox";>
+                <P>Sunless Tanning (1)</P> </div>
+            <div> <input type="checkbox";>
+                <P>Tools (Non-Electrical) (1)</P> </div>           
+        </div>
+
+
+        <button onclick="mydivfun">Key Ingredients</button>
+        <div class="left_inside_div">
+            <div> <input type="checkbox" class="ckeckbox1">
+                <P>Algae Extract (2)</P></div>
+            <div><input type="checkbox";>
+                <P>Aloe Vera (25)</P></div>
+            <div><input type="checkbox";>
+                <P>Alpha Hydroxy Acids (2)</P></div>
+            <div> <input type="checkbox";>
+                <P>Amino Acids (11)</P></div>
+            <div> <input type="checkbox";>
+                <P>Antioxidants (51)</P></div>
+            <div>  <input type="checkbox";>
+                <P>Beeswax (6)</P> </div>
+            <div> <input type="checkbox";>
+                <P>Ceramides (2)</P> </div>           
+        </div>
+
+
+        <button onclick="mydivfun">Preferences </button>
+        <div class="left_inside_div">
+            <div> <input type="checkbox" class="ckeckbox1">
+                <P>Certified Cruelty-Free (66)</P></div>
+            <div><input type="checkbox";>
+                <P>Certified Organic (6)</P></div>
+            <div><input type="checkbox";>
+                <P>Fragrance-Free (18)</P></div>
+            <div> <input type="checkbox";>
+                <P>Gluten-Free (18)</P></div>
+            <div> <input type="checkbox";>
+                <P>Hypoallergenic (1)</P></div>
+            <div>  <input type="checkbox";>
+                <P>Non-Comedogenic (9)</P> </div>
+            <div> <input type="checkbox";>
+                <P>Paraben-Free (51)</P> </div>           
+        </div>
+
+
+    </div>
+    <!-- making text div to put all the text which are above priduct div----------------------- -->
 
     <div  class="text_div">
-        <h1>Men's Essentials</h1>
+        <p id="heading">Men's Essentials</p>
         <p>150 results</p>
         <p>Dermstore offers a wide range of men's products to suit almost every need and concern from shaving creams to styling products, each formula is specially geared to protect, nourish or groom no matter the or skin type. Stock up on your faves or discover something new, below.</p>
         <div class="short_div">
@@ -126,14 +363,17 @@
         </div>
     </div>
 
+    <!-- making container to store all the product information ---------------------------------- -->
 
     <div class="container">
     </div>
 
-
 </body>
 </html>
 <script>
+    function mydivfun(){
+        document.querySelector
+    }
       var mensdata=
     [
         {

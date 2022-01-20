@@ -1,0 +1,69 @@
+
+.left_div {
+    width: 360px;
+    margin-left: 15px;
+}
+
+.left_div>#refine {
+    height: 50px;
+    font-size: 20px;
+    font-weight: 700;
+    border-bottom: 1px solid lightgray;
+
+}
+
+.left_div>button {
+    background-color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+
+    border-bottom: 1px solid gray;
+
+
+}
+
+.left_inside_div>div>p {
+    margin-left: 10px;
+    text-decoration: underline;
+
+}
+
+#filter_title {
+    height: 80px;
+    font-size: 20px;
+    font-weight: 400;
+    border-bottom: 1px solid lightgray;
+    padding-top: 15%;
+
+
+}
+
+
+
+.left_inside_div {
+    height: 185px;
+    width: 90%;
+    /* margin-bottom: 40px; */
+    overflow-y: scroll;
+}
+
+.left_inside_div>div {
+    display: flex;
+    height: 30px;
+    margin-top: 2%;
+}
+
+.left_inside_div>div>input {
+    height: 20px;
+    width: 20px;
+    margin: 0%;
+    padding: 0%;
+    border-radius: 0%;
+}
+
+.left_inside_div>div>p {
+    text-decoration: underline;
+    font-size: 16px;
+
+}

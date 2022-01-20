@@ -3,95 +3,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/navbar.css">
-    <!-- <link rel="stylesheet" href="./css/product_div.css"> -->
+    <link rel="stylesheet" href="./css/filteroptions.css">
+    <link rel="stylesheet" href="./css/product_container.css">
 
-    <title>Document</title>
+
+
+    <title>NAVBAR</title>
     <style>
-        #pdct_body {
-            display: flex;
-            margin-top: 20px;
-        }
-
-        #col1 {
-            width: 25%;
-            /* height: */
-            border: 1px solid red;
-        }
-
-        #col2 {
-            width: 75%;
-            padding-left: 20px;
-            border: 1px solid red;
-
-        }
-
-        #col2>text_div {
-            margin: 2%;
-        }
-
-        #pg_title {
-            font-size: 32px;
-        }
-
-        #pdct_count {
-            margin-bottom: 20px;
-        }
-
-        #page_detail {
-            margin-bottom: 20px;
-        }
-
-        #filter_option {
-            display: flex;
-            gap: 20px;
-            margin: 5px;
-            height: 30px;
-        }
-
-        .container {
-            display: grid;
-            grid-gap: 5px;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(6, 450px);
-            gap: 10px;
-            border: 2px solid teal;
-            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
-
-
-        }
-
-        .container>div {
-            text-align: center;
-            border: 2px solid teal;
-
-
-        }
-
-        /* .product_div>button{
-            width: 100%;
-            height: 50px;
-            color: rgb(252,245,233);
-            background-color:rgb(34,34,34);
-            font-size: 20px;
-        }
-        .image_name_div{
-            height: 75%;
-        }
-        .rating_review_div{
-            margin-top: -20px;
-            display: flex;
-            height: 40px;
-            padding-left: 140px;
-        }
         
-        .image_name_div>img{
-            height: 80%;
-            width:99%;
-        }
-        .bold{
-            font-size: 20px;
-            font-weight: bold;
-        } */
     </style>
 
 
@@ -114,9 +33,10 @@
                     alt="dermstore_logo" class="mobile-logo-icon">
 
                 <div class="account-cart">
-                    <div  class="nav_account">
-                        <img onclick="location.href='register_page.html';" src="https://i.postimg.cc/wjtLkcVz/user.png" alt="account-icon" class="account-icon">
-                        <p onclick="location.href='login.html';" >Account</p>
+                    <div class="nav_account">
+                        <img onclick="location.href='register_page.html';" src="https://i.postimg.cc/wjtLkcVz/user.png"
+                            alt="account-icon" class="account-icon">
+                        <p onclick="location.href='login.html';">Account</p>
                     </div>
                     <div class="nav_cart" onclick="location.href='cart.html';">
                         <img src="https://i.postimg.cc/sXBgkwMf/bag.png" alt="cart_icon" class="cart-icon">
@@ -171,21 +91,244 @@
     <div class="upper_div">
         <img src="https://cdn-icons-png.flaticon.com/128/664/664468.png">
         <p onclick="location.href='Shipping_Costs_and_Methods.html';">FREE US Shiping Over $50</p>
-        <img src="https://www.instantel.com/sites/instantel.com/files/2020-05/247-icon.svg">
+        <img src="https://cdn-icons-png.flaticon.com/128/35/35404.png">
         <p onclick="location.href='Shipping_Costs_and_Methods.html';">New costomer save 15% with code WELCOME15</p>
         <img src="https://cdn-icons-png.flaticon.com/128/4221/4221657.png">
         <p onclick="location.href='Shipping_Costs_and_Methods.html';">Redeem Dermstore Reward</p>
         <img src="https://cdn-icons-png.flaticon.com/128/2089/2089713.png">
         <p onclick="location.href='Shipping_Costs_and_Methods.html';">Pay in 4 With klarna</p>
     </div>
-    
+
     <div class="upper_div2" onclick="location.href='Skin Care_Kits_Value_Sets.html';">
         Limited Edition SkinCeuticals bundles are here! SHOP NOW.
     </div>
-    <p style="margin-top: 10px;margin-left: 10px;">Home/Skin Care</p>
+
+
+    <p style="margin-top: 10px;margin-left: 10px;">Home/Men's Essentials</p>
+
+
     <div id="pdct_body">
         <div id="col1">
+            <div class=" left_div">
+                <p id="refine">Refine</p>
 
+
+                <p id="filter_title">Brand
+                <p>
+                <div class="left_inside_div">
+                    <div> <input type="checkbox" class="ckeckbox1">
+                        <p>111SKIN (1)</p>
+                    </div>
+                    <div><input type="checkbox" ;>
+                        <p>Shiseido (2) </p>
+                    </div>
+                    <div><input type="checkbox" ;>
+                        <p>Anthony (6)</p>
+                    </div>
+                    <div> <input type="checkbox" ;>
+                        <p>Briogeo (1)</p>
+                    </div>
+                    <div> <input type="checkbox" ;>
+                        <p>Patricks (13)</p>
+                    </div>
+                    <div> <input type="checkbox" ;>
+                        <p>Caudalie (1)</p>
+                    </div>
+                    <div> <input type="checkbox" ;>
+                        <p>ClarityRx (1)</p>
+                    </div>
+                </div>
+
+                <p id="filter_title">Skincare Product Type
+                <p>
+
+                <div class="left_inside_div">
+                    <div> <input type="checkbox" class="ckeckbox1">
+                        <p>Cleansers (14)</p>
+                    </div>
+                    <div><input type="checkbox" ;>
+                        <p>Moisturizers (14) </p>
+                    </div>
+                    <div><input type="checkbox" ;>
+                        <p>Moisturizers (14)</p>
+                    </div>
+                    <div> <input type="checkbox" ;>
+                        <p>Exfoliators & Scrubs (8)</p>
+                    </div>
+                    <div> <input type="checkbox" ;>
+                        <p>Serums (8)</p>
+                    </div>
+                    <div> <input type="checkbox" ;>
+                        <p>Eye Care (7)</p>
+                    </div>
+                    <div> <input type="checkbox" ;>
+                        <p>Masks (2)</p>
+                    </div>
+                </div>
+
+                <p id="filter_title">Skin Type
+                <p>
+
+                <div class="left_inside_div">
+                    <div> <input type="checkbox" class="ckeckbox1">
+                        <p>Combination (67)</p>
+                    </div>
+                    <div><input type="checkbox" ;>
+                        <p>Dry (67)</p>
+                    </div>
+                    <div><input type="checkbox" ;>
+                        <p>Mature (67)</p>
+                    </div>
+                    <div> <input type="checkbox" ;>
+                        <p>Normal (72)</p>
+                    </div>
+                    <div> <input type="checkbox" ;>
+                        <p>Oily (66)</p>
+                    </div>
+                    <div> <input type="checkbox" ;>
+                        <p>Sensitive (65)</p>
+                    </div>
+                    <div> <input type="checkbox" ;>
+                        <p>Mature (67)</p>
+                    </div>
+                </div>
+
+                <p id="filter_title">Skincare Concern
+                <p>
+
+                <div class="left_inside_div">
+                    <div> <input type="checkbox" class="ckeckbox1">
+                        <p>Acne (68)</p>
+                    </div>
+                    <div><input type="checkbox" ;>
+                        <p>Pigmentation (10)</p>
+                    </div>
+                    <div><input type="checkbox" ;>
+                        <p>Fine Lines & Wrinkles (5)</p>
+                    </div>
+                    <div> <input type="checkbox" ;>
+                        <p>Dehydration (2)</p>
+                    </div>
+                    <div> <input type="checkbox" ;>
+                        <p>Dullness (2)</p>
+                    </div>
+                    <div> <input type="checkbox" ;>
+                        <p>Blemishes (1)</p>
+                    </div>
+                    <div> <input type="checkbox" ;>
+                        <p>Dark Circles & Puffiness (1)</p>
+                    </div>
+                </div>
+
+                <p id="filter_title">Hair Type
+                <p>
+
+                <div class="left_inside_div">
+                    <div> <input type="checkbox" class="ckeckbox1">
+                        <p>Afro-Caribbean (1)</p>
+                    </div>
+                    <div><input type="checkbox" ;>
+                        <p>Braided (1) </p>
+                    </div>
+                    <div><input type="checkbox" ;>
+                        <p>Colored (21)</p>
+                    </div>
+                    <div> <input type="checkbox" ;>
+                        <p>Curly & Wavy (24)</p>
+                    </div>
+                    <div> <input type="checkbox" ;>
+                        <p>Dry (24)</p>
+                    </div>
+                    <div> <input type="checkbox" ;>
+                        <p>Fine (27)</p>
+                    </div>
+                    <div> <input type="checkbox" ;>
+                        <p>Normal (30)</p>
+                    </div>
+                </div>
+                <p id="filter_title">Bath & Body Category
+                <p>
+
+                <div class="left_inside_div">
+                    <div> <input type="checkbox" class="ckeckbox1">
+                        <p>Bath & Shower (22)</p>
+                    </div>
+                    <div><input type="checkbox" ;>
+                        <p>Hair Removal (15) </p>
+                    </div>
+                    <div><input type="checkbox" ;>
+                        <p>Skin Health (14)</p>
+                    </div>
+                    <div> <input type="checkbox" ;>
+                        <p>Hygiene & Health (10)</p>
+                    </div>
+                    <div> <input type="checkbox" ;>
+                        <p>Sun Care (5)</p>
+                    </div>
+                    <div> <input type="checkbox" ;>
+                        <p>Sunless Tanning (1)</p>
+                    </div>
+                    <div> <input type="checkbox" ;>
+                        <p>Tools (Non-Electrical) (1)</p>
+                    </div>
+                </div>
+                <p id="filter_title">Key Ingredients
+                <p>
+
+
+                <div class="left_inside_div">
+                    <div> <input type="checkbox" class="ckeckbox1">
+                        <p>Algae Extract (2)</p>
+                    </div>
+                    <div><input type="checkbox" ;>
+                        <p>Aloe Vera (25)</p>
+                    </div>
+                    <div><input type="checkbox" ;>
+                        <p>Alpha Hydroxy Acids (2)</p>
+                    </div>
+                    <div> <input type="checkbox" ;>
+                        <p>Amino Acids (11)</p>
+                    </div>
+                    <div> <input type="checkbox" ;>
+                        <p>Antioxidants (51)</p>
+                    </div>
+                    <div> <input type="checkbox" ;>
+                        <p>Beeswax (6)</p>
+                    </div>
+                    <div> <input type="checkbox" ;>
+                        <p>Ceramides (2)</p>
+                    </div>
+                </div>
+
+                <p id="filter_title">Preferences
+                <p>
+
+                <div class="left_inside_div">
+                    <div> <input type="checkbox" class="ckeckbox1">
+                        <p>Certified Cruelty-Free (66)</p>
+                    </div>
+                    <div><input type="checkbox" ;>
+                        <p>Certified Organic (6)</p>
+                    </div>
+                    <div><input type="checkbox" ;>
+                        <p>Fragrance-Free (18)</p>
+                    </div>
+                    <div> <input type="checkbox" ;>
+                        <p>Gluten-Free (18)</p>
+                    </div>
+                    <div> <input type="checkbox" ;>
+                        <p>Hypoallergenic (1)</p>
+                    </div>
+                    <div> <input type="checkbox" ;>
+                        <p>Non-Comedogenic (9)</p>
+                    </div>
+                    <div> <input type="checkbox" ;>
+                        <p>Paraben-Free (51)</p>
+                    </div>
+                </div>
+
+
+            </div>
         </div>
 
         <div id="col2">
@@ -222,24 +365,7 @@
 
 
             <div class="container">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
+
             </div>
 
         </div>
@@ -264,7 +390,6 @@
 </script>
 
 
-<!-- 
 <script>
 
 
@@ -402,45 +527,42 @@
 
     mensdata.map(function (elm) {
         var div = document.createElement("div");
-        div.setAttribute("class", "box");
+        div.setAttribute("class", "product_div");
 
         var image = document.createElement("img");
         image.setAttribute("src", elm.image);
+        image.setAttribute("width", "100%");
+        image.setAttribute("height", "70%");
 
-        var name = document.createElement("h3")
+
+        var name = document.createElement("p")
         name.textContent = elm.product_name;
 
         var rating = document.createElement("p")
-        rating.textContent = elm.rating;
-
-        var rvw = document.createElement("p")
-        rvw.textContent = elm.review;
-
-        var div3 = document.createElement("div")
-        div3.append(rating, rvw)
-        div3.setAttribute("class", "box3")
+        rating.textContent = elm.rating + " " + elm.review;
+        rating.setAttribute("class", "bold")
+        rating.style.fontWeight = 300
 
         var price = document.createElement("p")
         price.textContent = "$" + elm.price;
         price.setAttribute("id", "price");
+        price.setAttribute("class", "bold")
+        price.style.fontWeight = 300
 
-        id_value = elm.product_name
 
         var btn = document.createElement("button");
         btn.textContent = "QUICK BUY";
-        btn.setAttribute("id", id_value);
-        btn.addEventListener("click", add_to_cart);
 
+        //creating div to store product image and product name--------------------------------
 
         var div2 = document.createElement("div")
         div2.append(image, name);
-        div2.setAttribute("class", "box2")
+        div2.setAttribute("class", "image_name_div")
 
-        div.append(div2, div3, price, btn);
+        div.append(image,name, rating, price, btn);
 
         document.querySelector(".container").append(div);
-    });
-
+    })
     cart = []
     function add_to_cart(event) {
         event.preventDefault();
@@ -449,4 +571,4 @@
         console.log(cart)
     };
 
-</script> -->
+</script>
