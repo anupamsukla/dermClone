@@ -21,6 +21,7 @@
             display: flex;
             padding-left: 100px;
             background-color: white;
+            /* fixing topbar while scrolling */
             overflow: hidden;
             position: fixed;
             top: 0;
@@ -309,7 +310,7 @@
             font-size: 130%;
             padding-left: 15px;
         }
-        #emailAlert1,#emailAlert2,#nameAlert,#passwordAlert1,#passwordAlert2,#passwordAlert3,#cofirmEmail2{
+        #emailAlert1,#emailAlert2,#emailAlert3,#nameAlert,#passwordAlert1,#passwordAlert2,#passwordAlert3,#cofirmEmail2{
             color: #c42c21;
             margin:0px;
             padding: 0px;
@@ -351,14 +352,14 @@
             <!-- input name -->
             <div><p class="inputtxt">*Full Name</p><input class="input" id="name" type="text" oninput="nameAlert()"><div class="alertDiv" id="alertDiv1"><i id="alertSign" class="material-icons">report_problem</i><p  class="inputtxt" id="nameAlert">Full Name is a required field</p></div></div>
             <!-- input email -->
-            <div><p class="inputtxt">*Email address</p><input class="input" id="email" type="email" oninput="validateEmail()"><div class="alertDiv" id="alertDiv2"><i id="alertSign" class="material-icons">report_problem</i><p  class="inputtxt" id="emailAlert1">Email address is a required field</p><p  class="inputtxt" id="emailAlert2">Email address must be a valid email</p></div></div>
+            <div><p class="inputtxt">*Email address</p><input class="input" id="email" type="email" oninput="validateEmail()"><div class="alertDiv" id="alertDiv2"><i id="alertSign" class="material-icons">report_problem</i><p  class="inputtxt" id="emailAlert1">Email address is a required field</p><p  class="inputtxt" id="emailAlert2">Email address must be a valid email</p><p  class="inputtxt" id="emailAlert3">This Email Id is already registered! Please Login.</p></div></div>
             <!-- input cofirm email -->
             <div><p class="inputtxt">*Confirm Email address</p><input class="input" id="cofirmEmail1" type="email" oninput="cofirmEmailAlert()"><div class="alertDiv" id="alertDiv3"><i id="alertSign" class="material-icons">report_problem</i><p  class="inputtxt" id="cofirmEmail2">Email address must match</p></div></div>
             <!-- input password -->
             <div><p class="inputtxt">*Password</p><div class="passwordShow"><input class="password" id="passwordinput" type="password" oninput="passwordAlert()"> <button class="showPassword" type="button">SHOW</button></div ></div>
             <div><p class="inputtxt" id="alertPassword">Include a minimum of 6 characters, and contain at least 1 number</p><div class="alertDiv" id="alertDiv4"><i id="alertSign" class="material-icons">report_problem</i><p  class="inputtxt" id="passwordAlert1">Password must be at least 6 characters</p><p class="inputtxt" id="passwordAlert2">Password is a required field</p></div></div>
             <!-- input cofirm password -->
-            <div><p class="inputtxt">*Confirm Password</p><div class="passwordShow"  type="password" ><input id="confirmPassword"class="password" type="password" oninput="confirmPasswordAlert()"> <button class="showPassword" type="button">SHOW</button></div ></div>
+            <div><p  class="inputtxt">*Confirm Password</p><div class="passwordShow"  type="password" ><input id="confirmPassword"class="password" type="password" oninput="confirmPasswordAlert()"> <button class="showPassword" type="button">SHOW</button></div ></div>
             <div><div class="alertDiv" id="alertDiv5"><i id="alertSign" class="material-icons">report_problem</i><p  class="inputtxt" id="passwordAlert3">Password must match</p></div></div>
             <div><p class="inputtxt">Cell Phone Number <span id="optional">(Optional)</span></p><input class="input txtMargin0" id="phone" type="text"><p class="inputtxt inputBelowTxt">We will use this number to send occasional promotional messages.</p></div>
             <div id="Referral"><p class="inputtxt">Referral Code<span id="optional">(Optional)</span></p><input class="input txtMargin0 ReferralInput" id="reffer" type="text"><p class="inputtxt inputBelowTxt">* Your referrals discount is automatically applied at cart</p></div>
@@ -379,7 +380,7 @@
 
 
 <script>
-    document.querySelector("#continuebutton").addEventListener("click",addObject);
+    document.querySelector("#continuebutton").addEventListener("click",clickValidate);
 
     function addObject(){
         var Name=document.querySelector("#name").value;
@@ -387,15 +388,17 @@
         var Password=document.querySelector("#passwordinput").value;
         var Phone=document.querySelector("#phone").value;
         var Refferel=document.querySelector("#reffer").value;
+        var rewardprogram=document.querySelector("#check").checked;
         var userData=JSON.parse(localStorage.getItem("userDataBase")) || [];
         var object={
             name:Name,
             email:Email,
             password:Password,
             phoneNo:Phone,
-            refferelCode:Refferel
+            refferelCode:Refferel,
+            rewardProgram:rewardprogram
         }
-        userData.push(object);
+        userData.push(object);console.log(userData)
         localStorage.setItem("userDataBase",JSON.stringify(userData))
     }
 
@@ -409,7 +412,7 @@
             document.getElementById("alertDiv2").style.display="flex"; 
         }
         else{
-            document.getElementById("alertDiv3").style.display="flex";  
+            document.getElementById("alertDiv3").style.display="flex"; 
         }
     }
 
@@ -446,7 +449,7 @@
 
                 if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(document.getElementById("email").value))
                 {
-                    document.getElementById("alertDiv2").style.display="none";  
+                    document.getElementById("alertDiv2").style.display="none"; 
                 }
                 else{
                     document.getElementById("alertDiv2").style.display="flex"; 
@@ -464,6 +467,49 @@
             document.getElementById("alertDiv1").style.display="none";  
         }
 
+    }
+
+    // continue button function
+
+    function clickValidate(){
+        if(document.getElementById("alertDiv1").style.display=="none"){
+            if(document.getElementById("alertDiv2").style.display=="none"){
+                if(document.getElementById("alertDiv3").style.display=="none"){
+                    if(document.getElementById("alertDiv4").style.display=="none"){
+                        if(document.getElementById("alertDiv5").style.display=="none"){
+                            checkExitingUser();
+                        }
+                        else{location.href="#confirmPassword";}
+                    }
+                    else{location.href="#passwordinput";}
+                }
+                else{location.href="#cofirmEmail1";}
+            }
+            else{location.href="#email";}
+        }
+        else{location.href="#name";}
+    }
+
+    //checking existing user or not
+
+    function checkExitingUser(){
+        var existingUserData = JSON.parse(localStorage.getItem("userDataBase"))
+        var length=existingUserData.length;
+        var emailId=document.querySelector("#email").value
+        for(var i=0;i<length;i++){
+            if(existingUserData[i]["email"]==emailId){
+                document.getElementById("emailAlert3").style.display="flex";
+                document.getElementById("alertDiv2").style.display="flex";
+                document.getElementById("emailAlert1").style.display="none";
+                location.href="#email";
+                
+            }
+            else{
+                addObject();
+                // enter Home Page URL here....
+                window.location.href="home.html";
+            }
+        }
     }
 
 </script>
