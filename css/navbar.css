@@ -338,7 +338,6 @@ input:placeholder-shown {
 
 
 .upper_div2 {
-    /* height: 45px; */
     text-align: center;
     margin-top: 0px;
     padding-top: 12px;
@@ -354,5 +353,4 @@ input:placeholder-shown {
 
 .upper_div2:hover {
     background-color: rgb(226, 223, 223);
-
 }
