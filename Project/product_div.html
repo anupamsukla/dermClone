@@ -32,25 +32,81 @@
         body>div:nth-child(5){
             grid-area: e;
         }
-        .container{
-           display: grid;
-           grid-gap: 20px;
-           grid-template-columns: repeat(3,1fr);
-           margin-top: 10px;
+
+
+
+/* <-----------------------------------------upper two row css starts------------------------------------>  */
+        .upper_div{
+            display: flex;
+            height: 62px;
+            width: 97.5%;
+            text-align: center;
+            background-color: rgb(242,242,242);
+            padding-left: 40px;
+            padding-right: 0px;
+            padding-top: 5px;
         }
+        .upper_div>img{
+            height: 30px;
+            margin-top: 12px;
+            margin-left: 90px;
+            margin-right: 10px;
+        }
+        p{
+            font-size: 17px;
+            font-weight: 500;
+        }
+        .upper_div2{
+            height: 58px;
+            text-align: center;
+            background-color: rgb(204,204,204);
+            margin-top: 0px;
+            padding-top: 6px;
+            color: rgb(51,51,51);
+        }
+/* <---------------------------------upper two rows css ends ------------------------------------------> */
+
+
+
+/*<--------------------------------- product dic css start --------------------------------------------->*/
         .text_div{
             margin-top: 80px;
             line-height: 30px;
         }
+        #heading{
+            font-family: "Poly Regular","Times New Roman",serif;
+            font-size: 30px;
+            font-weight:400 ;
+        }
         .text_div>div{
             display: flex;
-
+        }
+        p{
+            font-size: 17px;
+            font-weight: 500;
+        }
+        #short{
+            font-size: 17px;
+            font-weight: 500;
+            margin-left: 20px;
+            padding-right: 100px;
+            height: 50px;
+        }
+        .short_div{
+            margin-top: 50px;
+        }
+        .container{
+           display: grid;
+           margin-left: 10px;
+           grid-gap: 20px;
+           grid-template-columns: repeat(3,1fr);
+           margin-top: 10px;
         }
         .container>div{
             text-align: center;
         }
-        
         .product_div>button{
+            border: 0px;
             width: 100%;
             height: 50px;
             color: rgb(252,245,233);
@@ -66,7 +122,6 @@
             height: 40px;
             padding-left: 140px;
         }
-        
         .image_name_div>img{
             height: 80%;
             width:99%;
@@ -75,44 +130,10 @@
             font-size: 20px;
             font-weight: 700;
         }
-        .upper_div{
-            display: flex;
-            height: 70px;
-            width: 97.5%;
-            text-align: center;
-            background-color: rgb(242,242,242);
-            padding-left: 40px;
-            padding-right: 0px;
-            padding-top: 5px;
-        }
-        .upper_div>img{
-            height: 30px;
-            margin-top: 15px;
-            margin-left: 70px;
-            margin-right: 10px;
-        }
-        p{
-            font-size: 17px;
-            font-weight: 500;
-        }
-        .upper_div2{
-            height: 65px;
-            text-align: center;
-            background-color: rgb(204,204,204);
-            margin-top: 0px;
-            padding-top: 8px;
-            color: rgb(51,51,51);
-        }
-        #short{
-            font-size: 17px;
-            font-weight: 500;
-            margin-left: 20px;
-            padding-right: 80px;
-            height: 50px;
-        }
-        .short_div{
-            margin-top: 50px;
-        }
+/* <-------------------------------------product div css ends---------------------------------------> */
+
+
+/* <---------------------------------left side filter part div css starts -------------------------------->   */
         .left_div{
             height: 2100px;
             width: 360px;
@@ -138,13 +159,10 @@
             border-right: 0px;
             border-top: 0px;
             border-bottom: 1px solid gray;
-
-
         }
         .left_inside_div>div>p{
             margin-left: 10px;
             text-decoration: underline;
-
         }
         .left_inside_div{
             width: 100%;
@@ -159,14 +177,14 @@
         .left_inside_div>div>input{
             margin-top: 20px;
         }
-        #heading{
-            font-family: "Poly Regular","Times New Roman",serif;
-            font-size: 30px;
-            font-weight:400 ;
-        }
+/* <---------------------------------left side filter part div css starts -------------------------------->   */        
     </style>
 </head>
+
+
+
 <body>
+<!-----------------------upper two row div html part starts here--------------------------------------->
     <div class="upper_div">
         <img src="https://cdn-icons-png.flaticon.com/128/664/664468.png">
         <p>FREE US Shiping Over $50</p>
@@ -180,16 +198,18 @@
     <div class="upper_div2">
         <p class="bold">Limited Edition SlinCeuticals bundles are here! SHOP NOW.</p>
     </div>
+<!------------------------------------------upper two row div html part ends here-------------------------------->
 
-    <!-- making left div to store shorting thing ------------------------- -->
 
+    
+<!---------------------------------- making left div to store filter part starts --------------------------------------->
     <div class=" left_div">
         <p>Home/ Men's Essentials</p>
         <p id="refine">Refine</p>
         <hr style="color: gray; padding-bottom: 50px; border-bottom: 0px;border-left: 0px; border-right: 0px;">
 
 
-        <button onclick="mydivfun">Brand </button>
+        <button>Brand </button>
         <div class="left_inside_div">
             <div> <input type="checkbox" class="ckeckbox1">
                 <P>111SKIN (1)</P></div>
@@ -339,11 +359,12 @@
             <div> <input type="checkbox";>
                 <P>Paraben-Free (51)</P> </div>           
         </div>
-
-
     </div>
-    <!-- making text div to put all the text which are above priduct div----------------------- -->
+<!------------------------- making left div to store filter part ends --------------------------------->
 
+
+
+<!------------------- making text div to put all the text which are above product div starts ----------------------- -->
     <div  class="text_div">
         <p id="heading">Men's Essentials</p>
         <p>150 results</p>
@@ -359,21 +380,23 @@
                 <option>Newest arrival</option>
                 <option>Percentage discount</option>
             </select>
-
         </div>
     </div>
+<!---------------------- making text div to put all the text which are above product div ends ----------------------- -->
 
-    <!-- making container to store all the product information ---------------------------------- -->
 
+
+<!--------------------------- making container to store all the product information ---------------------------------- -->
     <div class="container">
     </div>
-
 </body>
 </html>
+
+
+
 <script>
-    function mydivfun(){
-        document.querySelector
-    }
+
+// ---------------------------------product data starts ------------------------------------------------------------>
       var mensdata=
     [
         {
@@ -502,9 +525,11 @@
             review:16,
             price:"21.00"
         }
-        
     ];
+// -------------------------------------product data ends------------------------------------------------------->
 
+
+// ----------------------------------maping data ------------------------------------------------------->
     mensdata.map(function(elm){
         var div=document.createElement("div");
         div.setAttribute("class","product_div");
@@ -523,8 +548,9 @@
         rvw.textContent=elm.review;
         rvw.setAttribute("class","bold")
 
-        // creating div for storing rating and review------------------------------------------
 
+
+// ---------------------creating div for storing rating and review------------------------------------------------->
         var div3=document.createElement("div")
         div3.append(rating,rvw)
         div3.setAttribute("class","rating_review_div")
@@ -537,8 +563,9 @@
         var btn=document.createElement("button");
         btn.textContent="QUICK BUY";
 
-        //creating div to store product image and product name--------------------------------
-        
+
+
+//--------------------------creating div to store product image and product name------------------------------------------>
         var div2=document.createElement("div")
         div2.append(image,name);
         div2.setAttribute("class","image_name_div")
