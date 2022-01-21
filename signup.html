@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -491,25 +492,35 @@
     }
 
     //checking existing user or not
-
     function checkExitingUser(){
-        var existingUserData = JSON.parse(localStorage.getItem("userDataBase"))
-        var length=existingUserData.length;
-        var emailId=document.querySelector("#email").value
-        for(var i=0;i<length;i++){
-            if(existingUserData[i]["email"]==emailId){
+        
+            if(isUser()){
                 document.getElementById("emailAlert3").style.display="flex";
                 document.getElementById("alertDiv2").style.display="flex";
                 document.getElementById("emailAlert1").style.display="none";
                 location.href="#email";
-                
             }
             else{
                 addObject();
                 // enter Home Page URL here....
                 window.location.href="home.html";
             }
-        }
     }
 
+    //user information checking in the database...
+    function isUser(){
+
+        var emailId=document.querySelector("#email").value;
+        var match=false;
+        var existingUserData = JSON.parse(localStorage.getItem("userDataBase")) || [];
+        var n=existingUserData.length;
+        for(var i=0;i<n;i++){
+            if(existingUserData[i]["email"]==emailId){
+                match=true;
+            }
+            else{match=false;}
+        }
+        return match;
+    }
 </script>
+
