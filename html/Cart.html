@@ -18,8 +18,6 @@
 
 <body>
 
-
-
     <div class="space-above-nav"></div>
     <!-------- Navigation Bar Starts Here ----------->
     <nav class="navigation">
@@ -167,7 +165,6 @@
     displayTable(cart_data)
 
     function displayTable(cart_data) {
-
         cart_data.map(function (elem, index) {
             var cart_row = document.createElement("tr");
             var body_item = document.createElement("td");
@@ -235,6 +232,8 @@
 
         });
     }
+    
     cart_total=cart_data.reduce((accum,value) => value.price*value.qty+accum,0)
     console.log(cart_total)
+
 </script>

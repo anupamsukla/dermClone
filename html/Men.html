@@ -49,7 +49,7 @@
                 </div>
             </div>
 
-            
+
             <div class="nav-menu">
                 <ul>
 
@@ -122,16 +122,18 @@
     </div>
     <!--------------below nav 2 rows sections ends here-->
 
+    <p id="breadcrum">Home/Men's Essentials</p>
 
 
-    
-    <p style="margin-top: 10px;margin-left: 10px;">Home/Men's Essentials</p>
 
+<!--------------------------- left side filter ----------------------------------------->
 
     <div id="pdct_body">
         <div id="col1">
             <div class=" left_div">
                 <p id="refine">Refine</p>
+
+
                 <p id="filter_title">Brand
                 <p>
                 <div class="left_inside_div">
@@ -349,23 +351,26 @@
 
             </div>
         </div>
+<!-- -----------------------------left side filter ends----------------------- -->
 
+
+<!-- ----------------------------product container starts here-------------------- -->
         <div id="col2">
 
             <div class="text_div">
                 <div id="pg_title">Men's Essentials</div>
                 <div id="pdct_count">18 results</div>
 
-                <div id="page_detail">Dermstore offers a wide range of men's products to suit almost every need and
+                <div id="page_detail"><p>Dermstore offers a wide range of men's products to suit almost every need and
                     concern from shaving
                     creams
                     to styling products, each formula is specially geared to protect, nourish or groom no matter the or
                     skin
-                    type. Stock up on your faves or discover something new, below.
+                    type. Stock up on your faves or discover something new, below.</p>
                 </div>
                 <div id="filter_option">
                     <div>
-                        <p>Sort By</p>
+                        <p >Sort By</p>
                     </div>
                     <div class="short_div">
                         <select id="short">
@@ -385,6 +390,13 @@
             </div>
         </div>
     </div>
+
+    <!-- -----------------right side product ends here------------------- -->
+
+
+
+    
+    
 </body>
 
 
@@ -432,13 +444,14 @@
             name.textContent = elm.product_name;
             var rating = document.createElement("p")
             rating.textContent = elm.rating + " " + elm.review;
+
             rating.setAttribute("class", "bold")
-            rating.style.fontWeight = 300
+
             var price = document.createElement("p")
             price.textContent = "$" + elm.price;
             price.setAttribute("id", "price");
             price.setAttribute("class", "bold")
-            price.style.fontWeight = 300
+
             id_value = elm.product_name
             var btn = document.createElement("button");
             btn.textContent = "QUICK BUY";
@@ -448,7 +461,6 @@
             div.append(image, name, rating, price, btn);
             document.querySelector(".container").append(div);
         })
-
     }
 
     function sortPrice() {
