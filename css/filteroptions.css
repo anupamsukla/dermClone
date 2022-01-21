@@ -25,7 +25,7 @@
 .left_inside_div>div>p {
     margin-left: 10px;
     font-weight: 500;
-    font-family: "lato regular",0Helvetica,Arial,sans-serif;
+    font-family: "lato regular",Helvetica,Arial,sans-serif;
     font-size: 15px;
     margin-bottom: 2px;
     text-decoration: underline;

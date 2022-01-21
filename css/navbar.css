@@ -171,7 +171,9 @@ input:placeholder-shown {
 
 .mobile-search-input {
     height: 35px;
-    width: 100%
+    width: 100%;
+    border-radius: 0.5em;
+    padding-left: 15px;
 }
 
 .mobile-search-button {
@@ -189,6 +191,10 @@ input:placeholder-shown {
 
 .main-mobile-search-container {
     display: none;
+    position: fixed;
+    z-index: 998;
+    top: 5;
+    width: 100%;
 }
 
 @media only screen and (min-width:520px) and (max-width:1200px) {
@@ -371,7 +377,6 @@ input:placeholder-shown {
     height: 20px;
     margin-left: 70px;
     margin-right: 10px;
-    border-bottom: 1px solid grey;
     color: rgb(51, 51, 51);
 
 }
@@ -379,18 +384,15 @@ input:placeholder-shown {
 .upper_div>p {
     padding-bottom: 4px;
     font: 20px;
-}
 
-.upper_div>p:hover {
-    color:gray;
-}
 
+}
 
 .upper_div2 {
     height: 50px;
     text-align: center;
     margin-top: 0px;
-    padding-top: 15px;
+    padding-top: 12px;
     background-color: rgb(204, 204, 204);
     color: rgb(51, 51, 51);
     font-size: 15px;
