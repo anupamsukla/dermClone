@@ -17,10 +17,7 @@
     font-size: 20px;
     font-weight: bold;
     border: none;
-
     border-bottom: 1px solid gray;
-
-
 }
 
 .left_inside_div>div>p {
@@ -35,8 +32,6 @@
     font-weight: 400;
     border-bottom: 1px solid lightgray;
     padding-top: 15%;
-
-
 }
 
 

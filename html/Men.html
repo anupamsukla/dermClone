@@ -23,7 +23,8 @@
     <nav class="navigation">
         <div class="nav-container">
             <div class="main-nav">
-                <img src="https://i.postimg.cc/nc4J56hc/dermstore-logo.png" alt="dermstore_logo" class="logo-icon" onclick="location.href='home.html';">
+                <img src="https://i.postimg.cc/nc4J56hc/dermstore-logo.png" alt="dermstore_logo" class="logo-icon"
+                    onclick="location.href='home.html';">
                 <div class="nav-search">
                     <img src="https://i.postimg.cc/5NQBNjyb/menu.png" alt="menu" class="mobile-menu">
                     <input type="text" class="search-container" placeholder="Search for a product or brand..">
@@ -37,8 +38,9 @@
                     class="mobile-logo-icon">
                 <div class="account-cart">
                     <div class="nav_account">
-                        <img src="https://i.postimg.cc/wjtLkcVz/user.png" alt="account-icon" class="account-icon" onclick="location.href='register_page.html';">
-                        <p onclick="location.href='login.html';" >Account</p>
+                        <img src="https://i.postimg.cc/wjtLkcVz/user.png" alt="account-icon" class="account-icon"
+                            onclick="location.href='register_page.html';">
+                        <p onclick="location.href='login.html';">Account</p>
                     </div>
                     <div class="nav_cart" onclick="location.href='Cart.html';">
                         <img src="https://i.postimg.cc/sXBgkwMf/bag.png" alt="cart_icon" class="cart-icon">
@@ -126,8 +128,6 @@
         <div id="col1">
             <div class=" left_div">
                 <p id="refine">Refine</p>
-
-
                 <p id="filter_title">Brand
                 <p>
                 <div class="left_inside_div">
@@ -635,24 +635,19 @@
         ];
     mapping_data(mensdata)
     document.querySelector('#short').addEventListener('change', sortPrice)
-
-
-
     var cart_data = JSON.parse(localStorage.getItem('Cart')) || []
-
+    
     function add_to_cart(event) {
         event.preventDefault();
         var add_product = mensdata.find(e => e.product_name === event.target.id)
-
-        if (cart_data.indexOf(add_product) < 0) {
+        index = cart_data.indexOf(add_product)
+        if (index < 0) {
             add_product.qty = 1
             cart_data.push(add_product)
         }
         else {
-            index = cart_data.indexOf(add_product)
             cart_data[index].qty += 1
         }
-        console.log(cart_data)
         localStorage.setItem('Cart', JSON.stringify(cart_data))
     };
 
