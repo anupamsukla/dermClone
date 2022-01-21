@@ -72,6 +72,12 @@
     margin-top: 2px;
 }
 
+.container>div>p {
+    padding-left: 10px;
+    padding-right: 10px;
+    
+}
+
 
 .product_div>button {
     width: 100%;

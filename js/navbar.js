@@ -9,7 +9,4 @@
     mobileNavExit.addEventListener("click", () => {
         mobileNav.classList.remove("show-menu")
     })
-
-
-
 </script>
