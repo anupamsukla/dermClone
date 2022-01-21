@@ -23,12 +23,18 @@ p {
     height: 40px;
     justify-content: center;
     background-color: black;
-    color: white;
     margin-bottom: 1em;
+}
+
+.checkout-button>p {
+    color: white;
+    background-color: black;
+
 }
 .checkout-button > img {
     width: 30px;
     height: 30px;
+    background-color: black;
 }
 #cart-table {
     margin: auto;

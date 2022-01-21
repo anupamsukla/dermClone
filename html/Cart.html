@@ -2,10 +2,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/navbar.css">
-    <link rel="stylesheet" href="./css/filteroptions.css">
-    <link rel="stylesheet" href="./css/product_container.css">
-    <link rel="stylesheet" href="./css/cart.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/filteroptions.css">
+    <link rel="stylesheet" href="../css/product_container.css">
+    <link rel="stylesheet" href="../css/cart.css">
 
     <title>Men's Skincare & Grooming Products | Dermstore</title>
     <style>
@@ -17,28 +17,32 @@
 </head>
 
 <body>
+ 
+
+
     <div class="space-above-nav"></div>
+    <!-------- Navigation Bar Starts Here ----------->
     <nav class="navigation">
         <div class="nav-container">
             <div class="main-nav">
-                <img onclick="location.href='home.html';" src="https://i.postimg.cc/nc4J56hc/dermstore-logo.png"
-                    alt="dermstore_logo" class="logo-icon">
+                <img src="https://i.postimg.cc/nc4J56hc/dermstore-logo.png" alt="dermstore_logo" class="logo-icon" onclick="location.href='home.html';">
                 <div class="nav-search">
                     <img src="https://i.postimg.cc/5NQBNjyb/menu.png" alt="menu" class="mobile-menu">
                     <input type="text" class="search-container" placeholder="Search for a product or brand..">
                     <img src="https://i.postimg.cc/90c6jfMm/search-interface-symbol.png" alt="search icon"
                         class="search-icon">
+                    <img src="https://i.postimg.cc/90c6jfMm/search-interface-symbol.png" alt="search icon"
+                        class="mobile-search-icon">
+                    <img src="https://i.postimg.cc/Lgdct409/close.png" alt="close button" class="search-close-button">
                 </div>
-                <img onclick="location.href='home.html';" src="https://i.postimg.cc/nc4J56hc/dermstore-logo.png"
-                    alt="dermstore_logo" class="mobile-logo-icon">
-
+                <img src="https://i.postimg.cc/nc4J56hc/dermstore-logo.png" alt="dermstore_logo"
+                    class="mobile-logo-icon">
                 <div class="account-cart">
                     <div class="nav_account">
-                        <img onclick="location.href='register_page.html';" src="https://i.postimg.cc/wjtLkcVz/user.png"
-                            alt="account-icon" class="account-icon">
-                        <p onclick="location.href='login.html';">Account</p>
+                        <img src="https://i.postimg.cc/wjtLkcVz/user.png" alt="account-icon" class="account-icon" onclick="location.href='register_page.html';">
+                        <p onclick="location.href='login.html';" >Account</p>
                     </div>
-                    <div class="nav_cart" onclick="location.href='cart.html';">
+                    <div class="nav_cart" onclick="location.href='Cart.html';">
                         <img src="https://i.postimg.cc/sXBgkwMf/bag.png" alt="cart_icon" class="cart-icon">
                         <p>Cart</p>
                     </div>
@@ -47,6 +51,8 @@
 
             <div class="nav-menu">
                 <ul>
+
+
                     <li onclick="location.href='Brands.html';">Brands</li>
                     <li onclick="location.href='Browseby.html';">Browse By</li>
                     <li onclick="location.href='Bestsellers.html';">Bestsellers</li>
@@ -55,14 +61,22 @@
                     <li onclick="location.href='Hair_Care.html';">Hair Care</li>
                     <li onclick="location.href='Bath_Body.html';">Bath & Body</li>
                     <li onclick="location.href='Men.html';">Men</li>
-                    <li onclick="location.href='Gifts_Sets.html';">Gifts & Sets</li>
+                    <li onclick="location.href='Gifts_Sets .html';">Gifts & Sets</li>
                     <li onclick="location.href='BeautyFIX.html';">BeautyFIX</li>
                     <li onclick="location.href='Sale.html';">Sale</li>
                     <li onclick="location.href='New.html';">New</li>
                     <li onclick="location.href='Skin_101.html';">Skin 101</li>
+
+
                 </ul>
             </div>
-
+            <div class="main-mobile-search-container">
+                <div class="mobile-search-container">
+                    <input type="text" class="mobile-search-input" placeholder="Search for a product or brand..">
+                    <img src="https://i.postimg.cc/90c6jfMm/search-interface-symbol.png" alt="search icon"
+                        class="mobile-search-button">
+                </div>
+            </div>
             <div class="mobile-nav-menu">
                 <div class="home-close-buttons">
                     <img src="https://i.postimg.cc/QHJ273gD/home-button.png" alt="home button"
@@ -78,30 +92,35 @@
                     <li onclick="location.href='Hair_Care.html';">Hair Care</li>
                     <li onclick="location.href='Bath_Body.html';">Bath & Body</li>
                     <li onclick="location.href='Men.html';">Men</li>
-                    <li onclick="location.href='Gifts_Sets.html';">Gifts & Sets</li>
+                    <li onclick="location.href='Gifts_Sets .html';">Gifts & Sets</li>
                     <li onclick="location.href='BeautyFIX.html';">BeautyFIX</li>
                     <li onclick="location.href='Sale.html';">Sale</li>
-                    <li onclick="location.href='Skin_101.html';">New</li>
-                    <li onclick="location.href='SkinCare.html';">Skin 101</li>
+                    <li onclick="location.href='New.html';">New</li>
+                    <li onclick="location.href='Skin_101.html';">Skin 101</li>
+
                 </ul>
             </div>
         </div>
     </nav>
-
-    <div class="upper_div">
-        <img src="https://cdn-icons-png.flaticon.com/128/664/664468.png">
-        <p onclick="location.href='Shipping_Costs_and_Methods.html';">FREE US Shiping Over $50</p>
-        <img src="https://cdn-icons-png.flaticon.com/128/35/35404.png">
-        <p onclick="location.href='Shipping_Costs_and_Methods.html';">New costomer save 15% with code WELCOME15</p>
-        <img src="https://cdn-icons-png.flaticon.com/128/4221/4221657.png">
-        <p onclick="location.href='Shipping_Costs_and_Methods.html';">Redeem Dermstore Reward</p>
-        <img src="https://cdn-icons-png.flaticon.com/128/2089/2089713.png">
-        <p onclick="location.href='Shipping_Costs_and_Methods.html';">Pay in 4 With klarna</p>
+    <!-- -----------Navigation Bar Ends Here-------------->
+    <!--------------below nav 2 rows sections starts here-->
+    <div class="below-nav-two-rows">
+        <div class="upper_div">
+            <img style="margin-left: 0px;" src="https://cdn-icons-png.flaticon.com/128/664/664468.png">
+            <p onclick="location.href='Shipping_Costs_and_Methods.html';">FREE US Shiping Over $50</p>
+            <img src="https://cdn-icons-png.flaticon.com/128/35/35404.png">
+            <p onclick="location.href='Shipping_Costs_and_Methods.html';">New costomer save 15% with code WELCOME15</p>
+            <img src="https://cdn-icons-png.flaticon.com/128/4221/4221657.png">
+            <p onclick="location.href='Shipping_Costs_and_Methods.html';">Redeem Dermstore Reward</p>
+            <img src="https://cdn-icons-png.flaticon.com/128/2089/2089713.png">
+            <p onclick="location.href='Shipping_Costs_and_Methods.html';">Pay in 4 With klarna</p>
+        </div>
+        <div class="upper_div2" onclick="location.href='Skin Care_Kits_Value_Sets.html';">
+            Limited Edition SkinCeuticals bundles are here! SHOP NOW.
+        </div>
     </div>
+    <!--------------below nav 2 rows sections ends here-->
 
-    <div class="upper_div2" onclick="location.href='Skin Care_Kits_Value_Sets.html';">
-        Limited Edition SkinCeuticals bundles are here! SHOP NOW.
-    </div>
 
     <div class="cart-container">
        
@@ -111,7 +130,7 @@
             <p style="font-size: 1.4em;">Your Cart</p>
             <button class="checkout-button">
                 <img src="https://i.postimg.cc/dV2Hbn7C/lock-icon-final.png" alt="lock icon" class="lock-icon">
-                <div>CHECKOUT SECURELY NOW</div>
+                <p>CHECKOUT SECURELY NOW</p>
             </button>
         </div>
        
@@ -153,3 +172,6 @@
     </div>
     
 </body>
+
+
+<script type="text/javascript" src="../js/navbar.js"></script>
