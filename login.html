@@ -140,6 +140,9 @@
             margin-top: 0px;
             margin-bottom: 20px;
         }
+        input{
+            padding-left: 10px;
+        }
         .showPassword{
             border:0px solid red;
             background-color: white;
@@ -218,6 +221,431 @@
             display: none;
         }
         /* alert message  */
+
+        /* <--------------------for tablet screen---------------> */
+        @media only screen and (min-width:600px) and (max-width:899px){
+        #topbar{
+            height: 30px;
+            padding:20px;
+            padding-bottom: 28px;
+            display: flex;
+            background-color: white;
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            justify-content: center;
+            /* border: 1px solid red; */
+        }
+        #container{
+            /* border:1px solid red; */
+            width:700px;
+            margin: auto;
+            margin-top: 100px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            /* justify-content: center; */
+        }
+        #left{
+            /* border:1px solid black; */
+            width:500px;
+            margin: auto; 
+            background-color: white;
+            padding: 22px;
+            margin-top:10px;
+            margin-bottom: 10px;
+
+        }
+        #right{
+            /* border:1px solid black; */
+            width:500px;
+            height: 115px;
+            margin: auto; 
+            background-color: white;
+            padding:22px;
+            padding-top: 23px;
+            margin-top: 10px;
+
+        }
+        #imagediv{
+            width:302px;
+            height: 48px;
+            padding: 2px 24px;
+            display: inline-block;
+            /* border: 1px solid black; */
+            margin-left:0px;
+        }
+        #image{
+            height: 100%;
+            width: 100%;
+        }
+        /* This is for top bar */
+        #social{
+            height: 100px;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            font-size: 15px;
+        }
+        #facebook {
+            height: 45px;
+            width: 230px;
+            color: #666666;
+            border:1px solid gray;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin:0px 10px
+        }
+        #fblogo{
+            height: 75%;
+            padding-right: 7px;
+
+        }
+        #google{
+            height: 45px;
+            width: 230px;
+            color: #666666;
+            border:1px solid gray;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin-right: 15px;
+        }
+        #googleimg{
+         height:55%;
+         padding-right: 8px;
+         
+        }
+        h1{
+            font-weight: normal;
+            font-style: normal;
+            font-size: 27px;
+            line-height: 0px;
+            letter-spacing: -0.5px;
+            margin-bottom: 20px;
+            color: rgb(61, 61, 61);
+            padding-bottom: 15px;
+        }
+        .inputtxt{
+            font-weight: 700;
+            font-style: normal;
+            font-family: Lato, sans-serif;
+            color: rgb(75, 75, 75);
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 0.1px;
+            padding-top: 8px;
+            margin-bottom: 10px;
+        }
+        .input{
+            height:43px;
+            width: 97%;
+            border: 1px solid gray;
+            border-radius: 3px;
+            margin-top: 0px;
+            margin-bottom: 10px;
+        }
+        input{
+            padding-left: 10px;
+        }
+        .showPassword{
+            border:0px solid red;
+            background-color: white;
+            text-align: center;
+            font-weight: 700;
+            font-style: normal;
+            font-family: Lato, sans-serif;
+            font-size: 14px;
+            line-height: 20px;
+            letter-spacing: 0.3px;
+            color: rgb(65, 65, 65);
+        }
+        .passwordShow{
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            height:43px;
+            width: 97%;
+            border: 1px solid gray;
+            border-radius: 3px;
+            margin-top: 0px;
+            margin-bottom: 9px;
+        }
+        .password{
+            height:41px;
+            width:618px;
+            border: 0px solid gray;
+            border-radius: 3px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+        .span{
+            font-weight: normal;
+            font-style: normal;
+            font-family: Lato, sans-serif;
+            font-size: 17px;
+            line-height: 24px;
+            color: rgb(31, 31, 31);
+            letter-spacing: -0.45px;
+        }
+        .button{
+            background-color: #222222;
+            color: white;
+            padding: 10px;
+            margin-bottom: 15px;
+            margin-top: 15px;
+            height: 50px;
+        }
+        /* alert message  */
+        .alertDiv{
+           height:43px;
+           width: 97%;
+           border-radius: 3px;
+           margin-top: 0px;
+           display: flex;
+           background-color: #fae8e6;
+           align-items: center;
+           display: none;
+        }
+        #emailAlert1,#emailAlert2,#emailAlert3,#passwordAlert1,#passwordAlert2{
+            color: #c42c21;
+            margin:0px;
+            padding: 0px;
+            padding-left: 5px;
+        }
+        i{
+            color: #c42c21; 
+            font-size: 130%;
+            padding-left: 15px;
+        }
+        #alertPassword{
+            margin-top: 0px;
+            padding-top: 0px;
+        }
+        #emailAlert1,#emailAlert2,#emailAlert3,#passwordAlert1,#passwordAlert2{
+            display: none;
+        }
+        /* alert message  */
+    }
+        /* <---------------------for mobile screen----------------------------------> */
+        @media only screen and (min-width:0px) and (max-width:599px){
+        #topbar{
+            height: 30px;
+            padding:20px;
+            padding-bottom: 28px;
+            display: flex;
+            background-color: white;
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            justify-content: center;
+            /* border: 1px solid red; */
+        }
+        #container{
+            /* border:1px solid red; */
+            width:98%;
+            margin: auto;
+            margin-top: 100px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: cplumn;
+            /* justify-content: center; */
+        }
+        #left{
+            /* border:1px solid black; */
+            width:85%;
+            height: 510px; 
+            margin: auto; 
+            background-color: white;
+            padding: 22px;
+            margin-top:10px;
+            margin-bottom: 10px;
+
+        }
+        #right{
+            /* border:1px solid black; */
+            width:85%;
+            height: 115px;
+            margin: auto; 
+            background-color: white;
+            padding:22px;
+            padding-top: 23px;
+            margin-top: 10px;
+
+        }
+        #imagediv{
+            width:302px;
+            height: 48px;
+            padding: 2px 24px;
+            display: inline-block;
+            /* border: 1px solid black; */
+            margin-left:0px;
+        }
+        #image{
+            height: 100%;
+            width: 100%;
+        }
+        /* This is for top bar */
+        #social{
+            height: 80px;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            font-size: 15px;
+        }
+        #facebook {
+            height: 35px;
+            width: 230px;
+            color: #666666;
+            border:1px solid gray;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin:0px 10px
+        }
+        #fblogo{
+            height: 80%;
+            padding-right: 7px;
+
+        }
+        #google{
+            height: 35px;
+            width: 230px;
+            color: #666666;
+            border:1px solid gray;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin-right: 15px;
+        }
+        #googleimg{
+         height:60%;
+         padding-right: 8px;
+         
+        }
+        h1{
+            font-weight: normal;
+            font-style: normal;
+            font-size: 25px;
+            line-height: 0px;
+            letter-spacing: -0.5px;
+            margin-bottom: 0px;
+            color: rgb(61, 61, 61);
+            padding-bottom: 10px;
+        }
+        .inputtxt{
+            font-weight: 700;
+            font-style: normal;
+            font-family: Lato, sans-serif;
+            color: rgb(75, 75, 75);
+            font-size: 15px;
+            line-height: 24px;
+            letter-spacing: 0.1px;
+            padding-top: 8px;
+            margin-bottom: 10px;
+        }
+        .input{
+            height:43px;
+            width: 97%;
+            border: 1px solid gray;
+            border-radius: 3px;
+            margin-top: 0px;
+            margin-bottom: 10px;
+        }
+        input{
+            padding-left: 10px;
+        }
+        .showPassword{
+            border:0px solid red;
+            background-color: white;
+            text-align: center;
+            font-weight: 700;
+            font-style: normal;
+            font-family: Lato, sans-serif;
+            font-size: 14px;
+            line-height: 20px;
+            letter-spacing: 0.3px;
+            color: rgb(65, 65, 65);
+        }
+        .passwordShow{
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            height:43px;
+            width: 97%;
+            border: 1px solid gray;
+            border-radius: 3px;
+            margin-top: 0px;
+            margin-bottom: 9px;
+        }
+        .password{
+            height:41px;
+            width:618px;
+            border: 0px solid gray;
+            border-radius: 3px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+        .span{
+            font-weight: normal;
+            font-style: normal;
+            font-family: Lato, sans-serif;
+            font-size: 15.5px;
+            line-height: 24px;
+            color: rgb(31, 31, 31);
+            letter-spacing: -0.45px;
+        }
+        .button{
+            background-color: #222222;
+            color: white;
+            padding: 3px;
+            margin-bottom: 15px;
+            margin-top: 15px;
+            height: 50px;
+        }
+        /* alert message  */
+        .alertDiv{
+           height:43px;
+           width: 97%;
+           border-radius: 3px;
+           margin-top: 0px;
+           display: flex;
+           background-color: #fae8e6;
+           align-items: center;
+           display: none;
+        }
+        #emailAlert1,#emailAlert2,#emailAlert3,#passwordAlert1,#passwordAlert2{
+            color: #c42c21;
+            margin:0px;
+            padding: 0px;
+            padding-left: 5px;
+        }
+        i{
+            color: #c42c21; 
+            font-size: 130%;
+            padding-left: 15px;
+        }
+        #alertPassword{
+            margin-top: 0px;
+            padding-top: 0px;
+        }
+        #emailAlert1,#emailAlert2,#emailAlert3,#passwordAlert1,#passwordAlert2{
+            display: none;
+        }
+        /* alert message  */
+    }
+            
     </style>
     <title>Document</title>
 </head>
@@ -297,14 +725,22 @@
                     document.querySelector("#left").style.height+="615px";
                     console.log(3)
                 }
-                else if(!validateEmail()){
-                    document.querySelector("#left").style.height+="615px";
-                }
-                else{   document.querySelector("#alertDiv2").style.display="flex";
+                else{
+                    if(!validEmail()){
+                        document.querySelector("#left").style.height+="615px";
+                        document.getElementById("alertDiv2").style.display="flex"; 
+                        document.getElementById("emailAlert1").style.display="none"; 
+                        document.getElementById("emailAlert2").style.display="flex";   
+                        document.getElementById("emailAlert3").style.display="none";   
+                    }
+                    else{
+                        document.querySelector("#alertDiv2").style.display="flex";
                         document.querySelector("#emailAlert3").style.display="flex";
+                        document.querySelector("#emailAlert2").style.display="none";
                         document.querySelector("#left").style.height="615px";   
                         window.location.href="#email"; 
                         console.log(5)   
+                    }
                 }
             }   
     }
@@ -323,6 +759,17 @@
             document.getElementById("emailAlert1").style.display="none"; 
             document.getElementById("emailAlert2").style.display="flex"; 
             document.querySelector("#left").style.height+="615px";
+            return false;
+        }    
+    }
+
+    function validEmail(){
+
+        if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(document.getElementById("email").value) || document.getElementById("email").value=="")
+        {
+            return true; 
+        }
+        else{
             return false;
         }    
     }
