@@ -265,16 +265,14 @@
         console.log(emailMatch,index);
         var emailId=document.querySelector("#email").value;
         var password=document.querySelector("#passwordinput").value;
-        var matchEmail=false;
-        var matchPassword=false;
         var existingUserData = JSON.parse(localStorage.getItem("userDataBase")) || [];
         var n=existingUserData.length;
             if(emailMatch){
-                if(existingUserData[index]["passwordinput"]==password){   
+                if(existingUserData[index]["password"]==password){   
                     //Enter HOME Page URL here.......                
                     window.location.href="home.html";                  
                 }
-                else if(existingUserData[index]["passwordinput"]!=password  && password!=""){ 
+                else if(existingUserData[index]["password"]!=password  && password!=""){ 
                       document.querySelector("#alertDiv4").style.display="flex";
                       document.querySelector("#passwordAlert1").style.display="flex";
                       document.querySelector("#left").style.height+="615px";
