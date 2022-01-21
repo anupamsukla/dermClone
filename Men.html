@@ -349,7 +349,7 @@
                     </div>
                     <div class="short_div">
                         <select id="short">
-                            <option value='1'>Default</option>
+                            <option value='1' selected>Default</option>
                             <option value='2'>Bestseller</option>
                             <option value='3'>Price:high to low</option>
                             <option value='4'>Price:low to high</option>
@@ -618,21 +618,24 @@
     mapping_data(mensdata)
     document.querySelector('#short').addEventListener('change', sortPrice)
 
-    cart = []
+   
+
+    var cart_data = JSON.parse(localStorage.getItem('Cart')) || []
 
     function add_to_cart(event) {
         event.preventDefault();
-        var add_pdt = mensdata.find(e => e.product_name === event.target.id)
+        var add_product = mensdata.find(e => e.product_name === event.target.id)
 
-        if(cart.indexOf(add_pdt)<0){
-            add_pdt.qty=1
-            cart.push(add_pdt)
+        if (cart_data.indexOf(add_product) < 0) {
+            add_product.qty = 1
+            cart_data.push(add_product)
         }
-        else{
-            index=cart.indexOf(add_pdt)
-            cart[index].qty+=1
+        else {
+            index = cart_data.indexOf(add_product)
+            cart_data[index].qty += 1
         }
-        console.log(cart)
+        console.log(cart_data)
+        localStorage.setItem('Cart', JSON.stringify(cart_data))
     };
 
 </script>

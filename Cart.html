@@ -1,11 +1,19 @@
-
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/navbar.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="./css/filteroptions.css">
+    <link rel="stylesheet" href="./css/product_container.css">
+    <link rel="stylesheet" href="./css/cart.css">
+
+    <title>Men's Skincare & Grooming Products | Dermstore</title>
+    <style>
+        .checkout-button{
+            color: black;
+        }
+    </style> 
+
 </head>
 
 <body>
@@ -13,28 +21,30 @@
     <nav class="navigation">
         <div class="nav-container">
             <div class="main-nav">
-                <img onclick="location.href='home.html';" src="https://i.postimg.cc/nc4J56hc/dermstore-logo.png" alt="dermstore_logo" class="logo-icon">
+                <img onclick="location.href='home.html';" src="https://i.postimg.cc/nc4J56hc/dermstore-logo.png"
+                    alt="dermstore_logo" class="logo-icon">
                 <div class="nav-search">
                     <img src="https://i.postimg.cc/5NQBNjyb/menu.png" alt="menu" class="mobile-menu">
                     <input type="text" class="search-container" placeholder="Search for a product or brand..">
                     <img src="https://i.postimg.cc/90c6jfMm/search-interface-symbol.png" alt="search icon"
                         class="search-icon">
                 </div>
-                <img onclick="location.href='home.html';" src="https://i.postimg.cc/nc4J56hc/dermstore-logo.png" alt="dermstore_logo"
-                    class="mobile-logo-icon">
+                <img onclick="location.href='home.html';" src="https://i.postimg.cc/nc4J56hc/dermstore-logo.png"
+                    alt="dermstore_logo" class="mobile-logo-icon">
 
-                <div  class="account-cart">
-                    <div onclick="location.href='login.html';" class="nav_account">
-                        <img src="https://i.postimg.cc/wjtLkcVz/user.png" alt="account-icon" class="account-icon">
-                        <p>Account</p>
+                <div class="account-cart">
+                    <div class="nav_account">
+                        <img onclick="location.href='register_page.html';" src="https://i.postimg.cc/wjtLkcVz/user.png"
+                            alt="account-icon" class="account-icon">
+                        <p onclick="location.href='login.html';">Account</p>
                     </div>
-                    <div class="nav_cart" onclick="location.href='cart.html';" >
+                    <div class="nav_cart" onclick="location.href='cart.html';">
                         <img src="https://i.postimg.cc/sXBgkwMf/bag.png" alt="cart_icon" class="cart-icon">
                         <p>Cart</p>
                     </div>
                 </div>
             </div>
-            
+
             <div class="nav-menu">
                 <ul>
                     <li onclick="location.href='Brands.html';">Brands</li>
@@ -45,11 +55,11 @@
                     <li onclick="location.href='Hair_Care.html';">Hair Care</li>
                     <li onclick="location.href='Bath_Body.html';">Bath & Body</li>
                     <li onclick="location.href='Men.html';">Men</li>
-                    <li onclick="location.href='Gifts_Sets .html';">Gifts & Sets</li>
+                    <li onclick="location.href='Gifts_Sets.html';">Gifts & Sets</li>
                     <li onclick="location.href='BeautyFIX.html';">BeautyFIX</li>
                     <li onclick="location.href='Sale.html';">Sale</li>
-                    <li onclick="location.href='Skin_101.html';">New</li>
-                    <li onclick="location.href='SkinCare.html';" >Skin 101</li>
+                    <li onclick="location.href='New.html';">New</li>
+                    <li onclick="location.href='Skin_101.html';">Skin 101</li>
                 </ul>
             </div>
 
@@ -68,32 +78,78 @@
                     <li onclick="location.href='Hair_Care.html';">Hair Care</li>
                     <li onclick="location.href='Bath_Body.html';">Bath & Body</li>
                     <li onclick="location.href='Men.html';">Men</li>
-                    <li onclick="location.href='Gifts_Sets .html';">Gifts & Sets</li>
+                    <li onclick="location.href='Gifts_Sets.html';">Gifts & Sets</li>
                     <li onclick="location.href='BeautyFIX.html';">BeautyFIX</li>
                     <li onclick="location.href='Sale.html';">Sale</li>
                     <li onclick="location.href='Skin_101.html';">New</li>
-                    <li onclick="location.href='SkinCare.html';" >Skin 101</li>
+                    <li onclick="location.href='SkinCare.html';">Skin 101</li>
                 </ul>
             </div>
         </div>
     </nav>
-  <p>this is Cart</p>
-  <table>
-        
 
+    <div class="upper_div">
+        <img src="https://cdn-icons-png.flaticon.com/128/664/664468.png">
+        <p onclick="location.href='Shipping_Costs_and_Methods.html';">FREE US Shiping Over $50</p>
+        <img src="https://cdn-icons-png.flaticon.com/128/35/35404.png">
+        <p onclick="location.href='Shipping_Costs_and_Methods.html';">New costomer save 15% with code WELCOME15</p>
+        <img src="https://cdn-icons-png.flaticon.com/128/4221/4221657.png">
+        <p onclick="location.href='Shipping_Costs_and_Methods.html';">Redeem Dermstore Reward</p>
+        <img src="https://cdn-icons-png.flaticon.com/128/2089/2089713.png">
+        <p onclick="location.href='Shipping_Costs_and_Methods.html';">Pay in 4 With klarna</p>
+    </div>
 
-  </table>
+    <div class="upper_div2" onclick="location.href='Skin Care_Kits_Value_Sets.html';">
+        Limited Edition SkinCeuticals bundles are here! SHOP NOW.
+    </div>
+
+    <div class="cart-container">
+       
+       
+       
+        <div class="cart-checkout-section">
+            <p style="font-size: 1.4em;">Your Cart</p>
+            <button class="checkout-button">
+                <img src="https://i.postimg.cc/dV2Hbn7C/lock-icon-final.png" alt="lock icon" class="lock-icon">
+                <div>CHECKOUT SECURELY NOW</div>
+            </button>
+        </div>
+       
+       
+       
+        <table id="cart-table">
+            <thead class="cart-table-head">
+                <tr>
+                    <th class="head-item">Items</th>
+                    <th class="head-price">Price</th>
+                    <th class="head-quantity">Quantity</th>
+                    <th class="head-subtotal">Subtoal</th>
+                    <th class="head-remove">Remove</th>
+                </tr>
+            </thead>
+            <tbody class="cart-table-body">
+                <tr>
+                    <td class="body-item" style="text-align: left;">
+                        <div class="body-item-container">
+                            <img src="https://s1.thcdn.com//productimg/70/70/12642437-1384891471591053.jpg" alt="image">
+                            <p> Christophe Robin Cleansing Purifying Scrub with Sea Salt 75ml</p>
+                        </div>
+                    </td>
+                    <td class="body-price">2</td>
+                    <td class="body-quantity">
+                        <div class="body-quantity-container">
+                            <button class="decrement-item">-</button>
+                            <div class="disply-item-quantity">1</div>
+                            <button class="increment-item">+</button>
+                        </div>
+                    </td>
+                    <td class="body-subtotal">4</td>
+                    <td class="body-remove">
+                        <button class="remove-item-cart">X</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
 </body>
-<script>
-    var mobileNavBtn = document.querySelector(".mobile-menu");
-    var mobileNav = document.querySelector(".mobile-nav-menu")
-    var mobileNavExit = document.querySelector(".mobile-close-button")
-
-    mobileNavBtn.addEventListener("click", () => {
-        mobileNav.classList.add("show-menu")
-    })
-    mobileNavExit.addEventListener("click", () => {
-        mobileNav.classList.remove("show-menu")
-    })
-</script>
-
