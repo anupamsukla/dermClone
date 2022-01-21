@@ -9,30 +9,21 @@
     <!-- Linking CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" />
     <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="home.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-    <title>Hello, world!</title>
-    <style>
-        .carousel-control-prev-icon {
-            background-color: rgba(5, 5, 5, 0.500);
-        }
-
-        .carousel-control-prev {
-            width: 5em;
-        }
-
-        .carousel-control-next-icon {
-            background-color: rgba(5, 5, 5, 0.500);
-        }
-
-        .carousel-control-next {
-            width: 5em;
-        }
-    </style>
+    <title>Home</title>
 </head>
 
 <body>
-
     <div class="space-above-nav"></div>
     <!-------- Navigation Bar Starts Here ----------->
     <nav class="navigation">
@@ -110,8 +101,11 @@
             </div>
         </div>
     </nav>
+
     <!-- -----------Navigation Bar Ends Here-------------->
+
     <!--------------below nav 2 rows sections starts here-->
+
     <div class="below-nav-two-rows">
         <div class="upper_div">
             <img style="margin-left: 0px;" src="https://cdn-icons-png.flaticon.com/128/664/664468.png">
@@ -127,57 +121,115 @@
             Limited Edition SkinCeuticals bundles are here! SHOP NOW.
         </div>
     </div>
+
     <!--------------below nav 2 rows sections ends here-->
+
     <!--------------Image slider 1 section starts here-->
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="https://static.thcdn.com/images/xlarge/webp/widgets/208-us/31/HomepageBannerWeek3-4-061731.jpg"
-                    class="d-block w-100 item-one" alt="...">
+    <section class="top-image-slider">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://static.thcdn.com/images/xlarge/webp/widgets/208-us/31/HomepageBannerWeek3-4-061731.jpg"
+                        class="d-block w-100 item-one" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://static.thcdn.com/images/xlarge/webp/widgets/208-us/59/HomepageBannerEdit-084959.jpg"
+                        class="d-block w-100 item-two" alt="...">
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
-            <div class="carousel-item">
-                <img src="https://static.thcdn.com/images/xlarge/webp/widgets/208-us/59/HomepageBannerEdit-084959.jpg"
-                    class="d-block w-100 item-two" alt="...">
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
         </div>
+    </section>
+    <!--------------Image slider 1 section ends here----->
+
+    <!--------------Post caroucel starts here------------>
+    <section class="best-seller-post-slider">
+        <p style="text-align: center; margin: 2em; font-size: 1.5em; font-family:Poly Regular,Times New Roman,serif;">
+            Best Sellers</p>
+        <div class="owl-carousel owl-theme">
+            <div class="item">
+                <div class="silder-item-container">
+                    <img class="slider-item-image"
+                        src="https://static.thcdn.com/images/small/webp//productimg/original/11289609-8744892770898772.jpg"
+                        alt="">
+                    <p class="slider-item-name">SkinCeuticals C E Ferulic (1 fl. oz.)</p>
+                    <p class="slider-item-reviews">★★★★☆ 4101</p>
+                    <p class="slider-item-price">$166.00</p>
+                    <button class="slider-buy-button">QUICK BUY</button>
+                </div>
+            </div>
+            <div class="item">
+                <div class="silder-item-container">
+                    <img class="slider-item-image"
+                        src="https://static.thcdn.com/images/small/webp//productimg/original/12747871-8964864285151349.jpg"
+                        alt="">
+                    <p class="slider-item-name">SkinCeuticals C E Ferulic (1 fl. oz.)</p>
+                    <p class="slider-item-reviews">★★★★☆ 4101</p>
+                    <p class="slider-item-price">$166.00</p>
+                    <button class="slider-buy-button">QUICK BUY</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--------------Post caroucel starts here------------>
+
+    <!---------- 2 image hero section starts here-------->
+    <section class="hero-section">
+        <div class="hero-container">
+            <div class="hero-left-container">
+                <img src="https://static.thcdn.com/images/medium/webp/widgets/208-us/42/Virtue-071442.jpg" alt="image">
+                <p class="hero-heading">New from VIRTUE®</p>
+                <p class="hero-description">Three pro-curl products to define, hydrate & repair hair.</p>
+            </div>
+            <div class="hero-right-container">
+                <img src="https://static.thcdn.com/images/medium/webp/widgets/208-us/59/original-Makeup_%281%29-021059.jpg"
+                    alt="image">
+                <p class="hero-heading">Makeup Meets Skin Casre</p>
+                <p class="hero-description">Do not let your skin care stop at your foundation.</p>
+            </div>
+        </div>
+    </section>
+    <!---------- 2 image hero section ends here---------->
+
+    <!-----------video dsiplay section starts here------->
+    <section class="video-display">
+        <div class="video-container">
+            <video controls poster="https://s1.thcdn.com/widgets/208-us/24/MyDermstoreGlow_with_Cynthia-103124.jpg">
+                <source src="https://s1.thcdn.com/productvideo/0/DS_60_FINAL_10mb.mp4" type="video/mp4">
+            </video>
+        </div>
+    </section>
+    <!-----------video dsiplay section ends here--------->
+
+    <!-----------about and info section starts here------>
+    <div class="about-container">
+        <p class="about-heading">#MyDermstoreGlow</p>
+        <p class="about-description">We care about what goes on your skin, because of what iss within. Our assortment is top-rated, curated & authenticated—bringing you the highest quality products and straight-from-the-experts info to help you navigate all things beauty and skin care. Join the conversation on Instagram with #MyDermstoreGlow—show us your favorite #Dermstore finds that help you care for the skin you’re in! Wee are excited to feature our communitys must-haves all season long.</p>
     </div>
-    <!--------------Image slider 1 section ends here-->
+    <!-----------about and info section starts here------>
     
-    <!--------------javascript Starts------------->
-    <script type="text/javascript" src="navbar.js"></script>
-    <script>
-        var screenWidth = document.documentElement.clientWidth;
-        var item1 = document.querySelector(".item-one");
-        var item2 = document.querySelector(".item-two")
+    <!-----------Shop by Category Section---------------->
 
-        if (screenWidth >= 430 && screenWidth < 780) {
-            item1.src =
-                "https://static.thcdn.com/images/large/webp/widgets/208-us/36/original-TabletBannerWeek3-4-061736.jpg";
-            item2.src =
-                "https://static.thcdn.com/images/large/webp/widgets/208-us/16/original-HomePageBannerEditTablet-085016.jpg";
-        }
+    <!--------------javascript attach Starts------------->
 
-        if (screenWidth < 430) {
-            item1.src =
-                "https://static.thcdn.com/images/medium/webp/widgets/208-us/41/MobileBannerWeek3-4-061741.jpg";
-            item2.src =
-                "https://static.thcdn.com/images/medium/webp/widgets/208-us/23/HomepageBannerEditMobile-085023.jpg"
-        }
-    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="navbar.js"></script>
+    <script type="text/javascript" src="home.js"></script>
 </body>
 
 </html>
