@@ -22,6 +22,8 @@ li {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
+    z-index: 999;
+    width: 100%;
 }
 
 .nav-container {
@@ -159,8 +161,34 @@ input:placeholder-shown {
     width: 20px;
 }
 
-.show-menu {
-    display: block;
+.mobile-search-icon {
+    display: none;
+}
+
+.search-close-button {
+    display: none;
+}
+
+.mobile-search-input {
+    height: 35px;
+    width: 100%
+}
+
+.mobile-search-button {
+    height: 20px;
+    width: 20px;
+    margin: -2em;
+}
+
+.mobile-search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 3em;
+}
+
+.main-mobile-search-container {
+    display: none;
 }
 
 @media only screen and (min-width:520px) and (max-width:1200px) {
@@ -219,6 +247,17 @@ input:placeholder-shown {
 
     .nav-container {
         padding-top: 0em;
+    }
+
+    .nav-search .search-icon {
+        display: none;
+    }
+
+    .mobile-search-icon {
+        display: block;
+    }
+    .below-nav-two-rows {
+        display: none;
     }
 
 }
@@ -297,9 +336,20 @@ input:placeholder-shown {
         width: 16px;
     }
 
+    .nav-search .search-icon {
+        display: none;
+    }
+
+    .mobile-search-icon {
+        display: block;
+    }
+
+    .below-nav-two-rows {
+        display: none;
+    }
 }
 
-
+/* Below section 2 rows starts here */
 .bold {
     font-size: 20px;
     font-weight: bold;
@@ -307,13 +357,9 @@ input:placeholder-shown {
 }
 
 .upper_div {
-    margin: auto;
     display: flex;
-    /* height: 50px; */
-    text-align: center;
     background-color: rgb(242, 242, 242);
-    /* padding-left: 6%; */
-    /* padding-right: 0px; */
+    justify-content: center;
     padding-top: 15px;
     border-top: .5px solid grey;
     border-bottom: .5px solid grey;
@@ -336,8 +382,8 @@ input:placeholder-shown {
 
 }
 
-
 .upper_div2 {
+    /* height: 45px; */
     text-align: center;
     margin-top: 0px;
     padding-top: 12px;
@@ -347,10 +393,9 @@ input:placeholder-shown {
     font-weight: bolder;
     padding-bottom: 12px;
 
-
 }
 
-
 .upper_div2:hover {
-    background-color: rgb(226, 223, 223);
+    background-color: #e6e6e4;
+
 }
