@@ -379,15 +379,18 @@ input:placeholder-shown {
 .upper_div>p {
     padding-bottom: 4px;
     font: 20px;
-
-
 }
+
+.upper_div>p:hover {
+    color:gray;
+}
+
 
 .upper_div2 {
     height: 50px;
     text-align: center;
     margin-top: 0px;
-    padding-top: 12px;
+    padding-top: 15px;
     background-color: rgb(204, 204, 204);
     color: rgb(51, 51, 51);
     font-size: 15px;

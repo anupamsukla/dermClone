@@ -170,66 +170,43 @@
             var body_item = document.createElement("td");
             body_item.setAttribute("class", "body-item")
             body_item.style.textAlign = "left"
-
             var body_item_container = document.createElement("div");
             body_item_container.setAttribute("class", "body-item-container")
             var image = document.createElement("img");
             image.setAttribute("src", elem.image)
             var pdt_name = document.createElement("p");
             pdt_name.textContent = elem.product_name
-
             body_item_container.append(image,pdt_name)
             body_item.append(body_item_container)
-            
             var item_price = document.createElement("td");
             item_price.textContent = "$"+elem.price
             item_price.setAttribute("class", "body-price")
-
-    
             body_qty_div= document.createElement("td");
             body_qty_div.setAttribute("class", "body-quantity")
             var item_qty_container = document.createElement("div");
             item_qty_container.setAttribute("class", "body-quantity-container")
-
             minus_button = document.createElement("button");
             minus_button.setAttribute("class", "decrement-item")
             minus_button.textContent="-"
-
             var item_qty = document.createElement("div");
             item_qty.textContent=elem.qty
             item_qty.setAttribute("class","disply-item-quantity")
-
-             
             plus_button = document.createElement("button");
             plus_button.setAttribute("class", "increment-item")
             plus_button.textContent="+"
-            
-            
             item_qty_container.append(minus_button,item_qty,plus_button)
             body_qty_div.append(item_qty_container)
-            
             var item_total = document.createElement("td");
             item_total.setAttribute("class", "body-subtotal")
-            item_total.textContent = "$"+elem.qty * elem.price + ".00"
-
-
-
-            
-          
-             
-
+            item_total.textContent = "$"+(elem.qty * elem.price).toFixed(2)       
             var cross_td = document.createElement("td");
             cross_td.setAttribute("class", "body-remove")
             var cross_button = document.createElement("button");
             cross_button.textContent = "X";
             cross_button.setAttribute("class", "remove-item-cart")
             cross_td.append(cross_button)
-
-           
             cart_row.append(body_item,item_price,body_qty_div,item_total,cross_td)
             document.querySelector(".cart-table-body").append(cart_row)
-
-
         });
     }
     

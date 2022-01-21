@@ -57,7 +57,7 @@
 #page_detail{
     margin-bottom: 20px;
     line-height: 14px;
-    height: 60px;
+    /* height: 60px; */
 }
 #page_detail>p{
     line-height: 25px;
