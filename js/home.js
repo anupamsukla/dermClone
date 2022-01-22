@@ -19,27 +19,3 @@ if (screenWidth < 430) {
     item2.src =
         "https://static.thcdn.com/images/medium/webp/widgets/208-us/23/HomepageBannerEditMobile-085023.jpg"
 }
-
-// javascript code for Image sider ends here..
-
-// javascript code for Post slider starts here
-$('.owl-carousel').owlCarousel({
-    loop: true,
-    margin: 0,
-    nav: false,
-    responsive: {
-        0: {
-            items: 1
-        },
-        430: {
-            items: 2
-        },
-        850: {
-            items: 3
-        },
-        1200: {
-            items: 5
-        }
-    }
-})
-// javascript code for Post slider ends here

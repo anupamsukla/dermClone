@@ -15,7 +15,6 @@
     grid-gap:20px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(6, 450px);
-    border: 1px solid rebeccapurple;
 
 }
 #pdct_body {
@@ -91,7 +90,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border: 1px solid green;
 }
 .container>div>* {
     margin-top: 2px;
@@ -117,6 +115,14 @@
     font-family: "lato regular",Helvetica,Arial,sans-serif;
     border: 0px;
 }
+
+.product_div>button:hover {
+    
+    background-color: gray;
+}
+
+
+
 @media only screen and (min-width:769px) and (max-width:1150px){
     #col1{
         display: none;

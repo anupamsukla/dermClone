@@ -9,6 +9,21 @@
 }
 
 
+.container1>div>button:hover {
+    
+    background-color: gray;
+}
+
+.container>div>button:hover {
+    
+    background-color: gray;
+}
+
+.container2>div>button:hover {
+    
+    background-color: gray;
+}
+
 .container1>div {
     min-width: 19%;
     min-height: 450px;

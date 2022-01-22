@@ -17,7 +17,6 @@
 </head>
 
 <body>
-
     <div class="space-above-nav"></div>
     <!-------- Navigation Bar Starts Here ----------->
     <nav class="navigation">
@@ -147,7 +146,7 @@
                 </tr>
             </thead>
             <tbody class="cart-table-body">
-                
+
             </tbody>
         </table>
     </div>
@@ -160,11 +159,12 @@
 
 
 <script>
-    var cart_data = JSON.parse(localStorage.getItem("Cart"));
-    console.log(cart_data)
+    var cart_data = JSON.parse(localStorage.getItem("Cart")) || [];
     displayTable(cart_data)
 
     function displayTable(cart_data) {
+        document.querySelector(".cart-table-body").textContent = ""
+
         cart_data.map(function (elem, index) {
             var cart_row = document.createElement("tr");
             var body_item = document.createElement("td");
@@ -176,41 +176,93 @@
             image.setAttribute("src", elem.image)
             var pdt_name = document.createElement("p");
             pdt_name.textContent = elem.product_name
-            body_item_container.append(image,pdt_name)
+            body_item_container.append(image, pdt_name)
             body_item.append(body_item_container)
             var item_price = document.createElement("td");
-            item_price.textContent = "$"+elem.price
+            item_price.textContent = "$" + elem.price
             item_price.setAttribute("class", "body-price")
-            body_qty_div= document.createElement("td");
+            body_qty_div = document.createElement("td");
             body_qty_div.setAttribute("class", "body-quantity")
             var item_qty_container = document.createElement("div");
             item_qty_container.setAttribute("class", "body-quantity-container")
+            
+            
             minus_button = document.createElement("button");
             minus_button.setAttribute("class", "decrement-item")
-            minus_button.textContent="-"
+            minus_button.textContent = "-"
+            minus_button.setAttribute("id", index);
+            minus_button.addEventListener("click", decrement_quantity);
+
+
+
             var item_qty = document.createElement("div");
-            item_qty.textContent=elem.qty
-            item_qty.setAttribute("class","disply-item-quantity")
+            item_qty.textContent = elem.qty
+            item_qty.setAttribute("class", "disply-item-quantity")
+            
             plus_button = document.createElement("button");
             plus_button.setAttribute("class", "increment-item")
-            plus_button.textContent="+"
-            item_qty_container.append(minus_button,item_qty,plus_button)
+            plus_button.textContent = "+"
+            plus_button.setAttribute("id", index);
+            plus_button.addEventListener("click", increment_quantity);
+
+
+            item_qty_container.append(minus_button, item_qty, plus_button)    
             body_qty_div.append(item_qty_container)
+        
+            
             var item_total = document.createElement("td");
             item_total.setAttribute("class", "body-subtotal")
-            item_total.textContent = "$"+(elem.qty * elem.price).toFixed(2)       
+            item_total.textContent = "$" + (elem.qty * elem.price).toFixed(2)
+
+
             var cross_td = document.createElement("td");
             cross_td.setAttribute("class", "body-remove")
+            
             var cross_button = document.createElement("button");
             cross_button.textContent = "X";
             cross_button.setAttribute("class", "remove-item-cart")
+            
+            cross_button.setAttribute("id", index);
+            cross_button.addEventListener("click", deleteTask);
+            
+            
+            
             cross_td.append(cross_button)
-            cart_row.append(body_item,item_price,body_qty_div,item_total,cross_td)
+            cart_row.append(body_item, item_price, body_qty_div, item_total, cross_td)
             document.querySelector(".cart-table-body").append(cart_row)
         });
+
+        cart_total = cart_data.reduce((accum, value) => value.price * value.qty + accum, 0)
+        console.log(cart_total)
+
     }
-    
-    cart_total=cart_data.reduce((accum,value) => value.price*value.qty+accum,0)
-    console.log(cart_total)
+
+
+    function deleteTask(ev) {
+        cart_data = cart_data.filter(function (value, index, cart_data) {
+            return ev.target.id != index;
+        });
+        localStorage.setItem("Cart", JSON.stringify(cart_data));
+        displayTable(cart_data);
+    }
+
+    function increment_quantity(ev) {
+        cart_data[event.target.id].qty+=1
+        localStorage.setItem("Cart", JSON.stringify(cart_data));
+        displayTable(cart_data);
+    }
+
+    function decrement_quantity(ev) {
+        cart_data[event.target.id].qty-=1
+        if(cart_data[event.target.id].qty==0){
+            deleteTask(ev)
+        }
+        else{
+        
+        localStorage.setItem("Cart", JSON.stringify(cart_data));
+        displayTable(cart_data);
+        }
+    }
+
 
 </script>

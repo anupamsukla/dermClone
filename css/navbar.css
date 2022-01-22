@@ -388,6 +388,11 @@ input:placeholder-shown {
 
 }
 
+.upper_div>p:hover {
+    color:gray;
+}
+
+
 .upper_div2 {
     height: 50px;
     text-align: center;
@@ -400,6 +405,8 @@ input:placeholder-shown {
     padding-bottom: 12px;
 
 }
+
+
 
 .upper_div2:hover {
     background-color: #e6e6e4;
