@@ -647,7 +647,7 @@
 
     }
         /* <-----------------for tablet-------------------> */
-            @media only screen and (min-width:600px) and (max-width:899px){
+            @media only screen and (min-width:670px) and (max-width:899px){
                 /* This is for top bar */
         #topbar{
             height: 33px;
@@ -965,7 +965,7 @@
     }
 
         /* <------------------for mobile---------------------> */
-            @media only screen and (min-width:0px) and (max-width:599px){
+            @media only screen and (min-width:0px) and (max-width:669px){
                 /* This is for top bar */
         #topbar{
             height: 33px;
@@ -1003,7 +1003,7 @@
         }
         #content{
             grid-area: 2/1/2/112;
-           width:98%;
+           width:90%;
            height:1545px;
            padding: 32px;
            margin:auto;
@@ -1159,6 +1159,9 @@
         }
         .checkboxTxt{
             margin: auto 10px;
+        }
+        #check_txt{
+            width:60%;
         }
         .password{
             height:41px;
@@ -1328,7 +1331,7 @@
                     <input id="check" type="checkbox" checked="checked">
                     <span class="checkmark"></span>
                 </label>
-              <p class="inputtxt checkboxTxt"><span class="span">Include me in the Dermstore Rewards program</span> Read our terms of use.</p>
+              <div id="check_txt"><p class="inputtxt checkboxTxt"><span class="span">Include me in the Dermstore Rewards program</span> Read our terms of use.</p></div>
             </div>
             <button class="input inputtxt" id="continuebutton">CONTINUE</button>
             <div class="inputtxt checkboxTxt"><span class="span">By proceeding, you are confirming that you agree to our</span> Terms and Conditions <span class="span">and</span> Privacy Policy</div>
