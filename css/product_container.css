@@ -15,6 +15,7 @@
     grid-gap:20px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(6, 450px);
+    border: 1px solid rebeccapurple;
 
 }
 #pdct_body {
@@ -90,6 +91,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    border: 1px solid green;
 }
 .container>div>* {
     margin-top: 2px;
