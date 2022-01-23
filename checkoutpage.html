@@ -904,7 +904,8 @@ function success(){
     document.querySelector("#cardNum").value!="" && document.querySelector("#nameOncard").value!="" &&
     document.querySelector("#month").value!="" && document.querySelector("#year").value!="" ){
         alert("Order Placed Successfully!");
-        window.location.href="home.html"
+        window.location.href="../index.html"
+        localStorage.setItem("Cart", JSON.stringify([]));
     }
     else{
         alert("Please fill all the required information");
@@ -958,7 +959,8 @@ mapItems();
             total+=(element.qty*element.price);
         });
         document.getElementById('itemCount').textContent=count+' items';
-        document.getElementById('totalPrice').textContent='$'+total;
+        total = JSON.parse(localStorage.getItem("couponTotal"));
+        document.getElementById('totalPrice').textContent='$'+total.toFixed(2);
     }
    
     
