@@ -697,8 +697,9 @@
         var n=existingUserData.length;
             if(emailMatch){
                 if(existingUserData[index]["password"]==password){   
-                    //Enter HOME Page URL here.......                
-                    window.location.href="home.html";                  
+                    //Enter HOME Page URL here.......
+                    window.location.href="home.html";
+                    alert("login suceesfull")                                
                 }
                 else if(existingUserData[index]["password"]!=password  && password!=""){ 
                       document.querySelector("#alertDiv4").style.display="flex";
@@ -748,7 +749,6 @@
     //! validate email
 
     function validateEmail(){
-
         if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(document.getElementById("email").value) || document.getElementById("email").value=="")
         {
             document.getElementById("alertDiv4").style.display="none";
