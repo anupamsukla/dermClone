@@ -147,37 +147,149 @@ var mensdata =
 
 ];
 
-mensdata.map(function (elm) {
-    var div = document.createElement("div");
-    div.setAttribute("class", "product_div");
+data_best_seller = [{
+    product_name: "Best of Dermstore - Dermstore x Skin Cancer Foundation 2021 Sun Care Kit",
+    image: "https://static.thcdn.com/images/large/webp//productimg/1600/1600/13126532-1174866320930436.jpg",
+    rating: "★★★★☆",
+    review: 630,
+    price: 40.00,
+    category: "Sale"
+},
+{
+    product_name: "Best of Dermstore Problem Solution: Hydrating Regimen",
+    image: "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12918954-1904866557871858.jpg",
+    rating: "★★★★☆",
+    review: 40,
+    price: 52.50,
+    category: "Sale"
+},
+{
+    product_name: "Best of Dermstore Problem Solution: Brightening Regimen",
+    image: "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12918944-1944866557528760.jpg",
+    rating: "★★★★☆",
+    review: 80,
+    price: 52.50,
+    category: "Sale"
+},
+{
+    product_name: "Replenix Treatment Pads 20 (60 count)",
+    image: "https://static.thcdn.com/images/large/webp//productimg/1600/1600/11290598-5364907614943877.jpg",
+    rating: "★★★★☆",
+    review: 131,
+    price: 33.20,
+    category: "Sale"
+},
+{
+    product_name: "Epionce Medical Barrier Cream (8 oz.)",
+    image: "https://static.thcdn.com/images/large/webp//productimg/1600/1600/11287450-1114871898389850.jpg",
+    rating: "★★★★☆",
+    review: 51,
+    price: 40.80,
+    category: "Sale"
+},
+{
+    product_name: "Epionce Medical Barrier Cream (8 oz.)",
+    image: "https://static.thcdn.com/images/large/webp//productimg/1600/1600/11287450-1114871898389850.jpg",
+    rating: "★★★★☆",
+    review: 51,
+    price: 40.80,
+    category: "Sale"
+},
+{
+    product_name: "Bioderma Sebium H2O (16.7 fl. oz.)",
+    image: "https://static.thcdn.com/images/large/webp//productimg/1600/1600/11709489-1464918413505461.jpg",
+    rating: "★★★★☆",
+    review: 51,
+    price: 12.74,
+    category: "Sale"
+},
+{
+    product_name: "Nuface Fix Smooth And Tighten Gift Set",
+    image: "https://static.thcdn.com/images/large/webp//productimg/1600/1600/13280903-3884894825427088.jpg",
+    rating: "★★★★☆",
+    review: 71,
+    price: 104,
+    category: "Sale"
+},
+{
+    product_name: "Dermstore Collection Set of Two Ice Globes (1 pair)",
+    image: "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12902995-1984872045503433.jpg",
+    rating: "★★★★★",
+    review: 30,
+    price: 18.00,
+    category: "Sale"
+},
+{
+    product_name: "ILIA The After Hours Set (Worth $75.00)",
+    image: "https://static.thcdn.com/images/large/webp//productimg/1600/1600/13305213-1044907534546952.jpg",
+    rating: "★★★★★",
+    review: 39,
+    price: 43.20,
+    category: "Sale"
+},
+{
+    product_name: "ILIA The Small Wonders Set (Worth $52.00)",
+    image: "https://static.thcdn.com/images/large/webp//productimg/1600/1600/13305212-2494907534493936.jpg",
+    rating: "★★★★☆",
+    review: 25,
+    price: 26.10,
+    category: "Sale"
+},
+{
+    product_name: "COSRX AHA 7 Whitehead Power Liquid (3.38 fl. oz.)",
+    image: "https://static.thcdn.com/images/large/webp//productimg/1600/1600/11401175-6684864721368800.jpg",
+    rating: "★★★★☆",
+    review: 39,
+    price: 15.40,
+    category: "Sale"
+},
+{
+    product_name: "No7 Youthful Replenishing Facial Oil (1 fl. oz.)",
+    image: "https://static.thcdn.com/images/large/webp//productimg/1600/1600/11286764-6574862662473300.jpg",
+    rating: "★★★★☆",
+    review: 73,
+    price: 22.99,
+    category: "Sale"
+},
+{
+    product_name: "AMELIORATE Transforming Body Lotion 100ml",
+    image: "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12673784-1054911737895009.jpg",
+    rating: "★★★★☆",
+    review: 72,
+    price: 13.30,
+    category: "Sale"
+},
+{
+    product_name: "ORA Microneedle Face Roller System 0.25mm (1 piece)",
+    image: "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12905406-6864871572904280.jpg",
+    rating: "★★★★☆",
+    review: 198,
+    price: 20.80,
+    category: "Sale"
+},
+{
+    product_name: "Dermstore Collection Spa Headband 1piece",
+    image: "https://static.thcdn.com/images/large/webp//productimg/1600/1600/13007841-4144919013543243.jpg",
+    rating: "★★★★☆",
+    review: 23,
+    price: 10.00,
+    category: "Sale"
+},
+{
+    product_name: "Dermstore Collection Exfoliator Glove 1 piece",
+    image: "https://static.thcdn.com/images/large/webp//productimg/1600/1600/13175604-6644893528589689.jpg",
+    rating: "★★★★☆",
+    review: 198,
+    price: "★★★★☆",
+    category: "Sale"
+},
+{
+    product_name: "Dermstore Collection Dry Brush Exfoliator With Handle (1 piece)",
+    image: "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12902993-4124871804553840.jpg",
+    rating: "★★★★☆",
+    review: 12,
+    price: 12.00,
+    category: "Sale"
+}
 
-    var image = document.createElement("img");
-    image.setAttribute("src", elm.image);
-    image.setAttribute("width", "100%");
-    image.setAttribute("height", "70%");
-
-
-    var name = document.createElement("p")
-    name.textContent = elm.product_name;
-
-    var rating = document.createElement("p")
-    rating.textContent = elm.rating + " " + elm.review;
-    rating.setAttribute("class", "bold")
-    rating.style.fontWeight = 300
-
-    var price = document.createElement("p")
-    price.textContent = "$" + elm.price;
-    price.setAttribute("id", "price");
-    price.setAttribute("class", "bold")
-    price.style.fontWeight = 300
-
-
-    var btn = document.createElement("button");
-    btn.textContent = "QUICK BUY";
-
-
-    div.append(image, name, rating, price, btn);
-
-    document.querySelector(".container").append(div);
-})
-
+]
