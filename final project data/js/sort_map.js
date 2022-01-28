@@ -42,10 +42,17 @@ function mapping_data(arr) {
         image.setAttribute("src", elm.image);
         image.setAttribute("width", "100%");
         image.setAttribute("height", "70%");
+        image.addEventListener("click", openProduct);
+
+
         var name = document.createElement("p")
         name.textContent = elm.product_name;
+        name.addEventListener("click", openProduct);
+
         var rating = document.createElement("p")
         rating.textContent = elm.rating + " " + elm.review;
+        rating.addEventListener("click", openProduct);
+
 
         rating.setAttribute("class", "bold")
 
@@ -53,12 +60,16 @@ function mapping_data(arr) {
         price.textContent = "$" + elm.price;
         price.setAttribute("id", "price");
         price.setAttribute("class", "bold")
+        price.addEventListener("click", openProduct);
+
 
         id_value = elm.product_name
         var btn = document.createElement("button");
         btn.textContent = "QUICK BUY";
         btn.setAttribute("id", id_value);
         btn.addEventListener("click", add_to_cart);
+ 
+        
 
         div.append(image, name, rating, price, btn);
         document.querySelector(".container").append(div);
@@ -132,13 +143,6 @@ function add_to_cart(event) {
     localStorage.setItem('Cart', JSON.stringify(cart_data));
 }
 
-
-
-////0pen product details page.........
-var x = document.querySelectorAll(".product_div >img,.product_div >p");
-x.forEach(function (item) {
-    item.addEventListener('click', openProduct);
-});
 
 function openProduct(elem) {
     var obj = {};
