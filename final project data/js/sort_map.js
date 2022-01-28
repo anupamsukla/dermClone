@@ -95,7 +95,6 @@ function sortPrice() {
     mapping_data(newArr)
 }
 
-var selected = document.querySelector("#short").value;
 
 mapping_data(mensdata)
 
@@ -133,45 +132,7 @@ function add_to_cart(event) {
     localStorage.setItem('Cart', JSON.stringify(cart_data));
 }
 
-mensdata.map(function (elm) {
-    var div = document.createElement("div");
-    div.setAttribute("class", "product_div");
 
-    var image = document.createElement("img");
-    image.setAttribute("src", elm.image);
-    image.setAttribute("width", "100%");
-    image.setAttribute("height", "70%");
-
-
-    var name = document.createElement("p")
-    name.textContent = elm.product_name;
-
-    var rating = document.createElement("p")
-    rating.textContent = elm.rating + " " + elm.review;
-    rating.setAttribute("class", "bold")
-    rating.style.fontWeight = 300
-
-    var price = document.createElement("p")
-    price.textContent = "$" + elm.price;
-    price.setAttribute("id", "price");
-    price.setAttribute("class", "bold")
-    price.style.fontWeight = 300
-
-
-    var btn = document.createElement("button");
-    btn.textContent = "QUICK BUY";
-
-
-    div.append(image, name, rating, price, btn);
-
-    document.querySelector(".container").append(div);
-})
-
-document.querySelectorAll('.some-class').forEach(item => {
-    item.addEventListener('click', event => {
-        //handle click
-    })
-})
 
 ////0pen product details page.........
 var x = document.querySelectorAll(".product_div >img,.product_div >p");
