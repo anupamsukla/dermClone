@@ -2,7 +2,8 @@
 
 This is our clone project of official website of dermstore.com. We have used HTML, CSS and javascript for this project and tried to replicate the UI of the website and also include as many features as we can. 
 
-## Getting Started
+## Getting Started![2022-04-29 (9)](https://user-images.githubusercontent.com/97473442/165981914-31ae9522-5908-4e5c-92fa-1b3a15567ff1.png)
+
 - Landing pages, login and signup pages, product category pages and more are made by ourself and all the important featues are also added.
 - All the CSS files are in CSS Folder, Javacript files are in js folder and all important pages are in pages folder.
 - Open index.html to visit the landing and navigate through whole website and pages.
